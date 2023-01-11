@@ -141,6 +141,7 @@ li {
   align-self: center;
 }
 .about-body__links .link {
+  line-height: 123%;
   transition: 0.3s;
   font-size: 24px;
   opacity: 0.25;
