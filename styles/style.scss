@@ -180,14 +180,12 @@ li {
   margin-left: 60px;
   grid-template-columns: 1fr 3fr;
   grid-column-gap: 10px;
-  transition: 3s ease-in-out;
 }
 .about-body__why {
   display: none;
   margin-left: 60px;
   grid-template-columns: 1fr;
   grid-column-gap: 10px;
-  transition: 3s ease-in-out;
   .description-content__ul {
     li {
       list-style-type: circle;
@@ -201,7 +199,6 @@ li {
   margin-left: 60px;
   grid-template-columns: 1fr 3fr;
   grid-column-gap: 10px;
-  transition: 3s ease-in-out;
 }
 .description {
   &-title {
