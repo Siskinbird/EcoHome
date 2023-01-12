@@ -23,7 +23,7 @@
         <div class="header-text">
             <span>Свобода. Доступность. Уникальность.</span>
             <h1 class="header-title">Построй дом своей мечты</h1>
-            <h3 class="header-subtitle">Мы построем тот дом, о котором вы мечтаете</h3>
+            <h3 class="header-subtitle">Мы построим тот дом, о котором вы мечтаете</h3>
             <div class="header-button">
                 <a href="#"><img src="./src/image/svg/arrow-right.svg" alt="play" class="play"></a>
                 <a href="#" class="button">Построй свой дом</a>
@@ -36,20 +36,20 @@
 </div>
 <!--    ABOUT SECTION    -->
 
-<section class="about">
+<section class="about" id="about">
 
     <!--        SLIDER       -->
 
     <div class="about-body container">
         <span class="about-body__label">ЭкоДом</span>
-        <div class="about-body__links">
+        <div class="about-body__links" >
             <ul>
-                <li class="link"><a href="#">О компании</a></li>
-                <li class="link"><a href="#">Руководство</a></li>
-                <li class="link"><a href="#">Почему мы?</a></li>
+                <li><a class="link" href="#first-slide">О компании</a></li>
+                <li><a class="link" href="#second-slide">Руководство</a></li>
+                <li><a class="link" href="#third-slide">Почему мы?</a></li>
             </ul>
         </div>
-        <div class="about-body__description">
+        <div class="about-body__description" id="first-slide">
             <div class="description-title">Липецкая компания "ЭкоДом"</div>
             <div class="description-content">
                 <div class="description-content__video">
@@ -67,7 +67,42 @@
                 </div>
             </div>
         </div>
+        <div class="about-body__author" id="second-slide">
+            <div class="description-content__author">
+                <img src="src/image/author/Evgeny.png">
+            </div>
+
+            <div class="description-content">
+                <div class="description-title">Здравствуйте, меня зовут Евгений Халипа</div>
+                <div class="description-content__subtitle">
+                    <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,
+                        так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="about-body__why" id="third-slide">
+            <div class="description-content__why">
+                <div class="description-content__why">
+                    <img src="src/image/author/why.png">
+                </div>
+                <div class="description-content__subtitle">
+                    <ul class="description-content__ul">
+                        <li>Отработаны процессы и накоплен огромный опыт.</li>
+                        <li>Строим под ключ: от гео-изысканий участка до ландшафтных работ.</li>
+                        <li>Благодаря комплексному подходу с нами спокойно.</li>
+                        <li>Мы всегда дорабатываем проект дома под выбранный участок и потребности каждого из будущих
+                            жильцов.
+                        </li>
+                        <li>Строгое соблюдение ГОСТ, СНиП.</li>
+                        <li>Полный цикл — от лесозаготовки до готового дома под ключ.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
+<script src="js/main.js"></script>
 </body>
 </html>
