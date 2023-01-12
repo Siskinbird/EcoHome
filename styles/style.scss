@@ -19,10 +19,13 @@
   src: url("fonts/Golos/golos-text_medium.ttf");
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Golos_regular', sans-serif;
   margin: 0;
-  scroll-behavior: smooth;
 }
 a {
   color: white;
