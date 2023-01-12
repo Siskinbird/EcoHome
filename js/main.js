@@ -19,11 +19,13 @@ parent.addEventListener('click', (event) => {
         target.classList.add('active');
         for(let i = 0; i < linkList.length; i++) {
             if(linkList[0].classList.contains('active')) {
+                // firstSlide.style.opacity = '1'
                 firstSlide.style.display = 'grid'
                 secondSlide.style.display = 'none'
                 thirdSlide.style.display = 'none'
             }
             if(linkList[1].classList.contains('active')) {
+                // firstSlide.style.opacity = '0'
                 firstSlide.style.display = 'none'
                 secondSlide.style.display = 'grid'
                 thirdSlide.style.display = 'none'
