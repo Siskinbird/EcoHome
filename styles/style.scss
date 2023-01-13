@@ -47,6 +47,7 @@ li {
 //Styles
 .wrapper {
   max-width: 100%;
+  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
 
 
 }
@@ -175,10 +176,13 @@ li {
 
 .about {
   display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
   height: 800px;
   padding-left: 60px;
   padding-right: 138px;
-  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
+  //background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
+
   &-label {
     text-align: center;
     transform: rotate(-90deg);
@@ -204,6 +208,7 @@ li {
       &:hover {
         transform: scale(1.2);
         opacity: 1;
+        //transform: translateX(10%);
       }
 
       &.active {
