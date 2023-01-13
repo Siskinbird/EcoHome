@@ -10,110 +10,142 @@
 </head>
 <body>
 <div class="wrapper">
-    <div class="header container">
-        <div class="header-logo">
-            <a href="#">ЭкоДом</a>
-        </div>
-        <nav class="header-nav">
-            <a class="header-nav__link" href="#first-slide">O компании</a>
-            <a class="header-nav__link" href="#">Строительство домов</a>
-            <a class="header-nav__link" href="#">Работы</a>
-            <a class="header-nav__link" href="#">Контакты</a>
-        </nav>
-        <div class="header-text">
-            <span>Свобода. Доступность. Уникальность.</span>
-            <h1 class="header-title">Построй дом своей мечты</h1>
-            <h3 class="header-subtitle">Мы построим тот дом, о котором вы мечтаете</h3>
-            <div class="header-button">
-                <a href="#"><img src="./src/image/svg/arrow-right.svg" alt="play" class="play"></a>
-                <a href="#" class="button">Построй свой дом</a>
-            </div>
-        </div>
-        <div class="header-circle">
-            <img class="hero-circle" src="src/image/svg/circle.svg">
-        </div>
-    </div>
-</div>
-<!--    ABOUT SECTION    -->
-
-<section class="about" id="about">
-
-    <!--        SLIDER       -->
-
-    <div class="about-body container">
-        <span class="about-body__label">ЭкоДом</span>
-        <div class="about-body__links" >
-            <ul>
-                <li><a class="link" href="#first-slide">О компании</a></li>
-                <li><a class="link" href="#second-slide">Руководство</a></li>
-                <li><a class="link" href="#third-slide">Почему мы?</a></li>
-            </ul>
-        </div>
-        <div class="about-body__description" id="first-slide">
-            <div class="description-title">Липецкая компания "ЭкоДом"</div>
-            <div class="description-content">
-                <div class="description-content__video">
-                    <img src="src/image/video/about-video.png">
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="header-top__logo">
+                    <a href="#">ЭкоДом</a>
                 </div>
-                <div class="description-content__subtitle">
-                    <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,
-                        так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.
-                    </p>
-                    <p>
-                        работает в сфере строительства уже более 13 лет. На данный момент более 500 семей стали обладателями
-                        собственных домов благодаря нашей компании. За это время у нас накопился значительный опыт в работе
-                        эффективного и надежного строительства домов, что вызывает доверие у наших текущих и будущих клиентов.
-                    </p>
-                </div>
+                <nav class="header-top__nav">
+                    <a class="header-top__nav-link" href="#first-slide">O компании</a>
+                    <a class="header-top__nav-link" href="#">Строительство домов</a>
+                    <a class="header-top__nav-link" href="#">Работы</a>
+                    <a class="header-top__nav-link" href="#">Контакты</a>
+                </nav>
             </div>
-        </div>
-
-
-
-        <div class="about-body__author" id="second-slide">
-            <div class="description-content__author">
-                <img src="src/image/author/Evgeny.png">
-            </div>
-
-            <div class="description-content">
-                <div class="description-title__author">
-                    <span>Здравствуйте, меня зовут Евгений Халипа</span>
-                    <div class="description-content__subtitle">
-                        <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,
-                            так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.
-                        </p>
+            <div class="header-content">
+                <div class="header-content__text">
+                    <span>Свобода. Доступность. Уникальность.</span>
+                    <h1 class="header-content__text-title">Построй дом своей мечты</h1>
+                    <h3 class="header-content__text-subtitle">Мы построим тот дом, о котором вы мечтаете</h3>
+                    <div class="header-content__text-button">
+                        <a href="#"><img src="./src/image/svg/arrow-right.svg" alt="play" class="play"></a>
+                        <a href="#">Построй свой дом</a>
                     </div>
                 </div>
-
+                <div class="header-content__circle">
+                    <div class="header-content__circle-arrow">
+                        <img src="src/image/svg/header-arrow.svg">
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <defs>
+                            <path d="M6,114a108,108 0 1,0 216,0a108,108 0 1,0 -216,0" id="textcircle"/>
+                            <style>
+                                text {
+                                    font-size: 12px;
+                                    font-family: Franklin Gothic, sans-serif;
+                                    font-weight: 200;
+                                    fill: white;
+                                    text-transform: uppercase;
+                                    letter-spacing: 10px;
+                                }
+                            </style>
+                        </defs>
+                        <text>
+                            <textPath xlink:href="#textcircle">
+                                Скролл·Скролл·Скролл·Скролл·Скролл·Скролл·
+                            </textPath>
+                        </text>
+                    </svg>
+                </div>
             </div>
         </div>
+    </header>
+</div>
+
+
+
+<!--    ABOUT SECTION    -->
+
+<!--<section class="about" id="about">-->
+
+<!--    &lt;!&ndash;        SLIDER       &ndash;&gt;-->
+
+<!--    <div class="about-body container">-->
+<!--        <span class="about-body__label">ЭкоДом</span>-->
+<!--        <div class="about-body__links" >-->
+<!--            <ul>-->
+<!--                <li><a class="link active" href="#first-slide">О компании</a></li>-->
+<!--                <li><a class="link" href="#second-slide">Руководство</a></li>-->
+<!--                <li><a class="link" href="#third-slide">Почему мы?</a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+<!--        <div class="about-body__description" id="first-slide">-->
+<!--            <div class="description-title">Липецкая компания "ЭкоДом"</div>-->
+<!--            <div class="description-content">-->
+<!--                <div class="description-content__video">-->
+<!--                    <img src="src/image/video/about-video.png">-->
+<!--                </div>-->
+<!--                <div class="description-content__subtitle">-->
+<!--                    <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,-->
+<!--                        так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.-->
+<!--                    </p>-->
+<!--                    <p>-->
+<!--                        работает в сфере строительства уже более 13 лет. На данный момент более 500 семей стали обладателями-->
+<!--                        собственных домов благодаря нашей компании. За это время у нас накопился значительный опыт в работе-->
+<!--                        эффективного и надежного строительства домов, что вызывает доверие у наших текущих и будущих клиентов.-->
+<!--                    </p>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
+<!--        <div class="about-body__author" id="second-slide">-->
+<!--            <div class="description-content__author">-->
+<!--                <img src="src/image/author/Evgeny.png">-->
+<!--            </div>-->
+
+<!--            <div class="description-content">-->
+<!--                <div class="description-title__author">-->
+<!--                    <span>Здравствуйте, меня зовут Евгений Халипа</span>-->
+<!--                    <div class="description-content__subtitle">-->
+<!--                        <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,-->
+<!--                            так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
 
 
 
 
 
-        <div class="about-body__why" id="third-slide">
-            <div class="description-content__why">
-                <div class="description-content__why">
-                    <img src="src/image/author/why.png">
-                </div>
-                <div class="description-content__subtitle">
-                    <ul class="description-content__ul">
-                        <li>Отработаны процессы и накоплен огромный опыт.</li>
-                        <li>Строим под ключ: от гео-изысканий участка до ландшафтных работ.</li>
-                        <li>Благодаря комплексному подходу с нами спокойно.</li>
-                        <li>Мы всегда дорабатываем проект дома под выбранный участок и потребности каждого из будущих
-                            жильцов.
-                        </li>
-                        <li>Строгое соблюдение ГОСТ, СНиП.</li>
-                        <li>Полный цикл — от лесозаготовки до готового дома под ключ.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<!--        <div class="about-body__why" id="third-slide">-->
+<!--            <div class="description-content__why">-->
+<!--                <div class="description-content__why">-->
+<!--                    <img src="src/image/author/why.png">-->
+<!--                </div>-->
+<!--                <div class="description-content__subtitle">-->
+<!--                    <ul class="description-content__ul">-->
+<!--                        <li>Отработаны процессы и накоплен огромный опыт.</li>-->
+<!--                        <li>Строим под ключ: от гео-изысканий участка до ландшафтных работ.</li>-->
+<!--                        <li>Благодаря комплексному подходу с нами спокойно.</li>-->
+<!--                        <li>Мы всегда дорабатываем проект дома под выбранный участок и потребности каждого из будущих-->
+<!--                            жильцов.-->
+<!--                        </li>-->
+<!--                        <li>Строгое соблюдение ГОСТ, СНиП.</li>-->
+<!--                        <li>Полный цикл — от лесозаготовки до готового дома под ключ.</li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-    </div>
-</section>
+<!--    </div>-->
+<!--</section>-->
 <script src="js/main.js"></script>
 </body>
 </html>

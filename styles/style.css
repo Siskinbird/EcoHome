@@ -22,6 +22,8 @@ html {
 body {
   font-family: "Golos_regular", sans-serif;
   margin: 0;
+  font-size: 16px;
+  color: white;
 }
 
 a {
@@ -39,90 +41,109 @@ li {
 
 .wrapper {
   max-width: 100%;
-  margin: 0 auto;
-  height: auto;
-  background: url("../src/image/background/background.png") 0 0/100% auto no-repeat;
 }
 
 .container {
-  width: 1380px;
+  max-width: 1400px;
+  padding: 0 40px;
   margin: 0 auto;
 }
 
 .header {
-  display: grid;
-  grid-template-columns: 1fr 5fr 5fr;
-  grid-template-rows: 1fr 8fr;
-  min-height: 790px;
+  background: url("../src/image/background/background.png") 0 0/100% auto no-repeat;
+  min-height: 800px;
+}
+.header-top {
+  display: flex;
   align-items: center;
-  color: white;
+  justify-content: space-between;
+  height: 110px;
+  padding: 0 12px;
 }
-.header-logo {
-  grid-area: header-logo;
-  justify-self: center;
-  grid-column: 1/2;
-  grid-row: 1/2;
+.header-top__logo {
+  font-weight: 600;
+  font-size: 20px;
 }
-.header-nav {
-  grid-area: header-nav;
-  grid-column: 3/4;
-  grid-row: 1/2;
-  justify-self: end;
-  padding-right: 20px;
+.header-top__nav-link {
+  font-size: 16px;
+  margin-left: 18px;
 }
-.header-nav__link {
-  margin-left: 20px;
+.header-content {
+  display: flex;
+  height: 690px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 98px;
+  padding-right: 98px;
 }
-.header-text {
-  grid-area: header-text;
-  grid-column: 2/3;
-  grid-row: 2/3;
-  padding-bottom: 56px;
+.header-content__text {
+  width: 466px;
+  height: 325px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 60px;
 }
-.header-title {
-  font-size: 70px;
-  font-weight: 700;
-  line-height: 81px;
+.header-content__text span {
+  font-size: 14px;
+  padding-top: 4px;
+  letter-spacing: 1px;
 }
-.header-subtitle {
+.header-content__text-title {
+  font-size: 72px;
+  font-weight: 600;
+}
+.header-content__text-subtitle {
   font-size: 20px;
   font-weight: 400;
-  line-height: 23px;
+  padding-top: 16px;
 }
-.header-circle {
-  grid-area: header-circle;
-  justify-self: end;
-}
-.header-circle img {
-  position: absolute;
-  right: 10%;
-  bottom: 13%;
-}
-.header-button {
+.header-content__text-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   width: 253px;
   height: 64px;
   margin-top: 46px;
   background-color: #25252C;
   border-radius: 55px;
   border: 0;
+  font-size: 14px;
   transition: 0.3s ease-in-out all;
 }
-.header-button:hover {
+.header-content__text-button:hover {
   background-color: #38384e;
 }
-.header-button img {
+.header-content__text-button img {
   margin-right: 10px;
   padding-top: 4px;
 }
-.header span {
-  font-size: 14px;
-  font-weight: 600;
+.header-content__circle {
+  position: relative;
+  margin-top: auto;
+  margin-bottom: 19px;
+}
+.header-content__circle-arrow img {
+  position: absolute;
+  right: 110px;
+  top: 74px;
+  height: 80px;
+  width: 8px;
+}
+.header-content__circle svg {
+  animation: 25s linear 0s normal none infinite running rotation;
+  width: 227px;
+  height: 227px;
 }
 
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .about {
   background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
 }
