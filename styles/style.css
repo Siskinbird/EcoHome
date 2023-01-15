@@ -1,4 +1,6 @@
 @import 'normalize.css';
+@import url("https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Oranienbaum&display=swap");
 @font-face {
   font-family: "Golos_regular";
   src: url("fonts/Golos/golos-text_regular.ttf");
@@ -41,6 +43,7 @@ li {
 
 .wrapper {
   max-width: 100%;
+  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
 }
 
 .container {
@@ -144,89 +147,6 @@ li {
     transform: rotate(360deg);
   }
 }
-.about {
-  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
-}
-
-.about-body {
-  height: 800px;
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 6fr 0.5fr;
-}
-.about-body__label {
-  align-self: center;
-  width: 60px;
-  padding-top: 84px;
-  transform: rotate(-90deg);
-  color: rgba(255, 255, 255, 0.1);
-  text-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01), -3px 35px 21px rgba(0, 0, 0, 0.05), -1px 16px 16px rgba(0, 0, 0, 0.09), 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
-}
-.about-body__links {
-  margin: 0 auto;
-  align-self: center;
-}
-.about-body__links .link {
-  line-height: 123%;
-  transition: 0.3s;
-  font-size: 24px;
-  opacity: 0.25;
-  display: block;
-}
-.about-body__links .link:hover {
-  transform: scale(1.2);
-  opacity: 1;
-}
-.about-body__links .link.active {
-  transform: scale(1.2);
-  opacity: 1;
-}
-
-.description-content__author {
-  align-self: center;
-  margin-right: 10px;
-  margin-left: auto;
-}
-
-.description-title__author {
-  align-self: center;
-  font-size: 62px;
-  color: white;
-  font-weight: 700;
-}
-.about-body__author {
-  display: none;
-  opacity: 0;
-  animation: fadeout 3s ease-in-out 0.1s forwards;
-  margin-left: 60px;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr;
-  grid-column-gap: 10px;
-}
-
-.about-body__why {
-  display: none;
-  opacity: 0;
-  animation: fadeout 3s ease-in-out 0.1s forwards;
-  margin-left: 60px;
-  grid-template-columns: 1fr;
-  grid-column-gap: 10px;
-}
-.about-body__why .description-content__ul li {
-  padding-top: 6px;
-  list-style-type: circle;
-  color: white;
-}
-
-.about-body__description {
-  transition: 0.2s;
-  display: grid;
-  margin-left: 60px;
-  grid-template-columns: 1fr 3fr;
-  grid-column-gap: 10px;
-  opacity: 0;
-  animation: fadeout 3s ease-in-out 0.1s forwards;
-}
-
 @keyframes fadeout {
   0% {
     opacity: 0;
@@ -235,35 +155,218 @@ li {
     opacity: 1;
   }
 }
-.description-title {
+.about {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 800px;
+  padding-left: 60px;
+  padding-right: 138px;
+}
+.about-label {
+  text-align: center;
+  transform: rotate(-90deg);
+  color: rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+  margin-bottom: auto;
+}
+.about-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  margin-right: auto;
+  margin-left: 44px;
+}
+.about-tabs__tab {
+  line-height: 123%;
+  transition: 0.3s;
+  opacity: 0.25;
+  padding: 5px;
+}
+.about-tabs__tab:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+.about-tabs__tab.active {
+  transform: scale(1.3);
+  opacity: 1;
+}
+.about-content {
+  display: none;
+}
+.about-content.active {
+  display: flex;
+  opacity: 0;
+  animation: fadeout 1s ease-in-out 0.1s forwards;
+}
+.about-content__about-title {
+  font-family: "Oranienbaum", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
   font-size: 56px;
-  margin-top: 231px;
-  margin-bottom: 317px;
-  color: white;
+  font-weight: 400;
+  padding-bottom: 148px;
 }
-
-.description-content__why {
-  align-self: center;
-  grid-row-gap: 10px;
-}
-.description-content__why img {
-  padding-left: 20px;
-}
-
-.description-content {
-  display: grid;
-  grid-row-gap: 44px;
-}
-.description-content__video {
-  align-self: end;
-  margin-right: 10px;
-  margin-left: auto;
-}
-.description-content__subtitle p {
-  font-weight: 300;
+.about-content__about-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 33px;
+  gap: 16px;
+  width: 455px;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
+}
+.about-content__about-description p {
+  margin: 0;
+  line-height: 114%;
+}
+.about-content__about-video {
+  margin-left: auto;
+  padding-bottom: 28px;
+}
+.about-content__author-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding-left: 10px;
+}
+.about-content__author-title {
+  font-family: "Oranienbaum", serif;
+  font-size: 56px;
+  font-weight: 400;
+}
+.about-content__author-photo {
+  width: 290px;
+  height: 380px;
+  padding-top: 172px;
+  padding-bottom: 247px;
+}
+.about-content__why-description {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 650px;
+}
+.about-content__why-description li {
   color: rgba(255, 255, 255, 0.8);
-  text-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01), -3px 35px 21px rgba(0, 0, 0, 0.05), -1px 16px 16px rgba(0, 0, 0, 0.09), 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  list-style-type: disc;
+  font-size: 16px;
+  font-weight: 300;
+}
+.about-content__why-photo {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.advantages {
+  height: 554px;
+  padding-left: 98px;
+  padding-right: 98px;
+  background: white url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
+}
+.advantages__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1F252D;
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+.advantages__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+}
+.advantages-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.advantages-item__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #A0A0A0;
+}
+.advantages-item__description {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #1F252D;
+  margin-left: 24px;
+}
+
+.projects {
+  height: 780px;
+  background: #FAFAFA;
+}
+.projects__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1F252D;
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
+.projects-slider__slide {
+  width: 380px;
+  height: 481px;
+  border-radius: 12px;
+  background-color: white;
+}
+
+.slide-inner {
+  padding: 18px 35px 21px 18px;
+  color: #1F252D;
+}
+.slide-inner__title {
+  font-size: 20px;
+}
+.slide-inner__description {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.slide-inner__description-item {
+  display: flex;
+  align-items: center;
+}
+.slide-inner__description-item p {
+  margin-left: 12px;
+}
+.slide-inner__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.slide-inner__price p {
+  margin: 0 0 8px;
+}
+.slide-inner__price-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #1F252D;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 52px;
+  height: 52px;
 }
 
 /*# sourceMappingURL=style.css.map */
