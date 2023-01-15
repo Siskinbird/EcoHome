@@ -268,4 +268,46 @@ li {
   margin-left: 20px;
 }
 
+.advantages {
+  height: 554px;
+  padding-left: 98px;
+  padding-right: 98px;
+  background: white url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
+}
+.advantages__title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1F252D;
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+.advantages__items {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 18px;
+}
+.advantages-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.advantages-item__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid #A0A0A0;
+}
+.advantages-item__description {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  color: #1F252D;
+  margin-left: 24px;
+}
+
 /*# sourceMappingURL=style.css.map */
