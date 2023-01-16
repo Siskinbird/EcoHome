@@ -182,6 +182,7 @@ li {
 
 
 //ABOUT
+//TODO кнопку плэй на видео
 
 .about {
   display: flex;
@@ -362,6 +363,7 @@ li {
 
 //PROJECTS
 //TODO Добавить два блока по бокам с прозрачным градиентом
+//TODO накинуть ховер на кнопку
 .projects {
   height: 800px;
   background: #FAFAFA;
@@ -390,6 +392,7 @@ li {
 .swiper-wrapper {
   width: 1400px;
 }
+//TODO накинуть ховеры на кнопки
 
 .swiper-button-prev {
   display: flex;
@@ -492,6 +495,9 @@ li {
   }
 }
 //BUILDING
+//TODO Накинуть логики на кнопки
+//TODO настроить контейнер обрезан БГ
+//TODO кнопку плэй на видео
 .building {
   height: 600px;
   background: #FAFAFA;
