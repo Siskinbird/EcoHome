@@ -372,11 +372,53 @@ li {
     padding-bottom: 55px;
   }
 }
-.projects-slider__slide{
-  width: 380px;
+.swiper-wrapper {
+  width: 1120px;
+}
+
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #25252C;
+  margin-left: 52px;
+  &:after {
+    content: '';
+  }
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+  }
+}
+.swiper-button-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #25252C;
+  margin-right: 52px;
+  &:after {
+    content: '';
+  }
+  img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.swiper-slide{
+  max-width: 380px;
   height: 481px;
   border-radius: 12px;
   background-color: white;
+  //padding-left: 24px;
 }
 .slide-inner {
   padding: 18px 18px 21px 18px;
@@ -402,7 +444,6 @@ li {
         margin-bottom: 10px;
       }
     }
-
   }
   //TODO Сделать линию before after
   &__price {

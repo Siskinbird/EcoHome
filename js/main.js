@@ -15,3 +15,20 @@ function tabClick(event) {
     tabs[tabId - 1].classList.add('active');
     tabContent[tabId - 1].classList.add('active')
 }
+
+
+
+// const swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     loop: true,
+//     speed: 400,
+//     slidesPerView: 1,
+//     spaceBetween: 10,
+//
+//     // Navigation arrows
+//     navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//     }
+// });
