@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Oranienbaum&display=swap');
 //Fonts
 
@@ -362,7 +363,7 @@ li {
 //PROJECTS
 //TODO Добавить два блока по бокам с прозрачным градиентом
 .projects {
-  height: 780px;
+  height: 800px;
   background: #FAFAFA;
   &__title {
     text-align: center;
@@ -372,9 +373,22 @@ li {
     padding-top: 50px;
     padding-bottom: 55px;
   }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 283px;
+      height: 64px;
+      margin: 44px auto 60px;
+      background-color: #25252C;
+      border-radius: 55px;
+      border: 0;
+      font-size: 14px;
+      transition: .3s ease-in-out all;
+    }
 }
 .swiper-wrapper {
-  width: 1120px;
+  width: 1400px;
 }
 
 .swiper-button-prev {
@@ -477,7 +491,85 @@ li {
     }
   }
 }
+//BUILDING
+.building {
+  height: 600px;
+  background: #FAFAFA;
 
+  &-buttons {
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 21px;
+    &__button {
+      &.active {
+        .building-buttons__button-image {
+          background-color: #25252C;
+          box-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01),
+          -3px 35px 21px rgba(0, 0, 0, 0.05),
+          -1px 16px 16px rgba(0, 0, 0, 0.09),
+          0px 4px 9px rgba(0, 0, 0, 0.1),
+          0px 0px 0px rgba(0, 0, 0, 0.1),
+          inset 0px 4px 28px rgba(0, 0, 0, 0.1);
+        }
+        p {
+          color: #25252C;
+        }
+      }
+    }
+
+    &__button-image {
+      width: 64px;
+      height: 64px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      border: 1px solid #A0A0A0;
+      cursor: pointer;
+      transition: all .3s ease-in-out;
+      &:hover {
+        background-color: #25252C;
+      }
+    }
+    p {
+      color: #25252C;
+      text-align: center;
+      margin-top: 8px;
+    }
+  }
+  &-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 54px;
+    &__description {
+      color: #020202;
+      width: 455px;
+      h2 {
+        font-family: 'Oranienbaum', serif;
+        font-size: 56px;
+      }
+      h4 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+        font-size: 42px;
+      }
+      p {
+        color: rgba(2, 2, 2, 0.8);
+
+        text-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01),
+        -3px 35px 21px rgba(0, 0, 0, 0.05),
+        -1px 16px 16px rgba(0, 0, 0, 0.09),
+        0px 4px 9px rgba(0, 0, 0, 0.1),
+        0px 0px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+
+  }
+}
 
 
 
