@@ -18,17 +18,17 @@ function tabClick(event) {
 
 
 
-// const swiper = new Swiper('.swiper', {
-//     // Optional parameters
-//     direction: 'horizontal',
-//     loop: true,
-//     speed: 400,
-//     slidesPerView: 1,
-//     spaceBetween: 10,
-//
-//     // Navigation arrows
-//     navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//     }
-// });
+//     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+//     const swiper = new Swiper('.swiper', {
+//         direction: 'horizontal',
+//         loop: true,
+//         speed: 400,
+//         slidesPerView: 3,
+//         spaceBetween: 24,
+//         effect: 'slide',
+//         // Navigation arrows
+//         navigation: {
+//             nextEl: '.swiper-button-next',
+//             prevEl: '.swiper-button-prev',
+//         }
+//     });

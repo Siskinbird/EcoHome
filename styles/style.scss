@@ -189,7 +189,6 @@ li {
   height: 800px;
   padding-left: 60px;
   padding-right: 138px;
-  //background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
 
   &-label {
     text-align: center;
@@ -207,6 +206,7 @@ li {
     font-size: 24px;
     margin-right: auto;
     margin-left: 44px;
+    cursor: pointer;
 
     &__tab {
       line-height: 123%;
@@ -316,7 +316,7 @@ li {
 
 //ADVANTAGES
 .advantages {
-  height: 554px;
+  height: 566px;
   padding-left: 98px;
   padding-right: 98px;
   background: white url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
@@ -360,6 +360,7 @@ li {
 }
 
 //PROJECTS
+//TODO Добавить два блока по бокам с прозрачным градиентом
 .projects {
   height: 780px;
   background: #FAFAFA;
@@ -418,13 +419,18 @@ li {
   height: 481px;
   border-radius: 12px;
   background-color: white;
-  //padding-left: 24px;
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+  &:hover {
+    box-shadow: 5px 2px 10px 0 rgba(34, 60, 80, 0.2);
+  }
+
 }
 .slide-inner {
   padding: 18px 18px 21px 18px;
   color: #1F252D;
   &__title {
-    //text-align: center;
     font-size: 20px;
     margin-bottom: 8px;
   }
@@ -451,7 +457,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding-top: 20px;
-    //border-top: 1px solid #1F252D;
+
     p {
       margin: 0 0 8px;
     }

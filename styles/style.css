@@ -178,6 +178,7 @@ li {
   font-size: 24px;
   margin-right: auto;
   margin-left: 44px;
+  cursor: pointer;
 }
 .about-tabs__tab {
   line-height: 123%;
@@ -269,7 +270,7 @@ li {
 }
 
 .advantages {
-  height: 554px;
+  height: 566px;
   padding-left: 98px;
   padding-right: 98px;
   background: white url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
@@ -371,6 +372,12 @@ li {
   height: 481px;
   border-radius: 12px;
   background-color: white;
+  transition: 0.3s all ease-in-out;
+  cursor: pointer;
+  margin: 10px;
+}
+.swiper-slide:hover {
+  box-shadow: 5px 2px 10px 0 rgba(34, 60, 80, 0.2);
 }
 
 .slide-inner {
