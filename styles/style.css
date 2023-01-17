@@ -466,6 +466,11 @@ li {
   justify-content: center;
   gap: 21px;
 }
+.building-buttons__button {
+  cursor: pointer;
+  width: 66px;
+  height: 108px;
+}
 .building-buttons__button.active .building-buttons__button-image {
   background-color: #25252C;
   box-shadow: -6px 62px 25px rgba(0, 0, 0, 0.01), -3px 35px 21px rgba(0, 0, 0, 0.05), -1px 16px 16px rgba(0, 0, 0, 0.09), 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1), inset 0px 4px 28px rgba(0, 0, 0, 0.1);

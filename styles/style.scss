@@ -49,8 +49,6 @@ li {
 .wrapper {
   max-width: 100%;
   background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
-
-
 }
 //
 .container {
@@ -316,6 +314,12 @@ li {
     }
   }
 }
+//.tab-wrapper {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//  gap: 159px;
+//}
 
 //ADVANTAGES
 .advantages {
@@ -521,6 +525,9 @@ li {
     justify-content: center;
     gap: 21px;
     &__button {
+      cursor: pointer;
+      width: 66px;
+      height: 108px;
       &.active {
         .building-buttons__button-image {
           background-color: #25252C;

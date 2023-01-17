@@ -1,14 +1,21 @@
+const aboutTabsWrapper = document.querySelector('.about-tabs');
+
+
 const aboutTabs = document.getElementsByClassName('about-tabs__tab');
 const aboutTabContent = document.getElementsByClassName('about-content');
-const progressTabs = document.getElementsByClassName('progress-tabs__tab');
-const progressTabContent = document.getElementsByClassName('progress-content');
 
-[...aboutTabs].forEach(tab => tab.addEventListener('click', tabClick));
-// [...progressTabs].forEach(tab => tab.addEventListener('click', tabClick));
-function tabClick(event) {
+const buildingTabsWrapper = document.querySelector('.building-buttons');
+const buildingButtonsButton = document.getElementsByClassName('building-buttons__button');
+
+const progressTabsWrapper = document.querySelector('.progress-tabs');
+
+aboutTabsWrapper.addEventListener('click', aboutTabClick);
+buildingTabsWrapper.addEventListener('click', buildingTabClick);
+progressTabsWrapper.addEventListener('click', progressTabClick);
+
+function aboutTabClick(event) {
+    console.log(event.target);
     const tabId = event.target.dataset.id;
-
-
     [...aboutTabs].forEach((tab, i) => {
         tab.classList.remove('active');
         aboutTabContent[i].classList.remove('active');
@@ -16,30 +23,31 @@ function tabClick(event) {
 
     aboutTabs[tabId - 1].classList.add('active');
     aboutTabContent[tabId - 1].classList.add('active');
+}
 
-    // [...progressTabs].forEach((tab, i) => {
-    //     tab.classList.remove('active-tab');
-    //     progressTabContent[i].classList.remove('active-tab');
-    //
-    //
-    // progressTabs[tabId - 1].classList.add('active-tab');
-    // progressTabContent[tabId - 1].classList.add('active-tab')
-// })
+function buildingTabClick(event) {
+    console.log(event.target);
+     const tabId = event.target.dataset.id;
+     [...buildingButtonsButton].forEach((tab, i) => {
+         tab.classList.remove('active');
+         buildingButtonsButton[i].classList.remove('active');
+     })
+     buildingButtonsButton[tabId - 4].classList.add('active');
 }
 
 
+const progressTabs = document.getElementsByClassName('progress-tabs__tab');
+const progressTabContent = document.getElementsByClassName('progress-content');
 
-//     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-//     const swiper = new Swiper('.swiper', {
-//         direction: 'horizontal',
-//         loop: true,
-//         speed: 400,
-//         slidesPerView: 3,
-//         spaceBetween: 24,
-//         effect: 'slide',
-//         // Navigation arrows
-//         navigation: {
-//             nextEl: '.swiper-button-next',
-//             prevEl: '.swiper-button-prev',
-//         }
-//     });
+
+function progressTabClick(event) {
+    console.log(event.target);
+    const tabId = event.target.dataset.id;
+    [...progressTabs].forEach((tab, i) => {
+        tab.classList.remove('active');
+        progressTabContent[i].classList.remove('active');
+    })
+
+    progressTabs[tabId - 7].classList.add('active');
+    progressTabContent[tabId - 7].classList.add('active');
+}

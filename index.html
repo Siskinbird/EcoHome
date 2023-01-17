@@ -69,53 +69,55 @@
     </header>
     <section class="about">
         <span class="about-label">ЭкоДом</span>
-        <div class="about-tabs">
-            <ul>
-                <li class="about-tabs__tab active" data-id="1">О компании</li>
-                <li class="about-tabs__tab" data-id="2">Руководство</li>
-                <li class="about-tabs__tab" data-id="3">Почему мы?</li>
-            </ul>
-        </div>
-        <div class="about-content active">
-            <div class="about-content__about-title">Липецкая компания "ЭкоДом"</div>
-            <div class="about-content__about-description">
-                <img class="about-content__about-video" src="src/image/video/video.png" alt="video house">
-                <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,
-                    так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.
-                </p>
-                <p>
-                    работает в сфере строительства уже более 13 лет. На данный момент более 500 семей стали
-                    обладателями
-                    собственных домов благодаря нашей компании. За это время у нас накопился значительный опыт в
-                    работе
-                    эффективного и надежного строительства домов, что вызывает доверие у наших текущих и будущих
-                    клиентов.
-                </p>
-            </div>
-        </div>
-        <div class="about-content">
-            <img class="about-content__author-photo" src="src/image/author/Evgeny.png" alt="author">
-            <div class="about-content__author-description">
-                <div class="about-content__author-title">Здравствуйте, меня зовут Евгений Халипа</div>
-                <p>Я, как руководитель отдела, гарантирую вам, что ваш дом будет построен качественно, в срок.
-                </p>
-            </div>
-        </div>
-        <div class="about-content">
-            <div class="about-content__why-description">
-                <img class="about-content__why-photo" src="src/image/author/why.png" alt="why us?">
+<!--        <div class="tab-wrapper">-->
+            <div class="about-tabs">
                 <ul>
-                    <li>Отработаны процессы и накоплен огромный опыт.</li>
-                    <li>Строим под ключ: от гео-изысканий участка до ландшафтных работ.</li>
-                    <li>Благодаря комплексному подходу с нами спокойно.</li>
-                    <li>Мы всегда дорабатываем проект дома под выбранный участок и потребности каждого из будущих
-                        жильцов.
-                    </li>
-                    <li>Строгое соблюдение ГОСТ, СНиП.</li>
-                    <li>Полный цикл — от лесозаготовки до готового дома под ключ.</li>
+                    <li class="about-tabs__tab active" data-id="1">О компании</li>
+                    <li class="about-tabs__tab" data-id="2">Руководство</li>
+                    <li class="about-tabs__tab" data-id="3">Почему мы?</li>
                 </ul>
             </div>
-        </div>
+            <div class="about-content active">
+                <div class="about-content__about-title">Липецкая компания "ЭкоДом"</div>
+                <div class="about-content__about-description">
+                    <img class="about-content__about-video" src="src/image/video/video.png" alt="video house">
+                    <p>В зависимости от пожеланий клиентов, мы можем построить дом любой сложности как по уже готовым,
+                        так и по индивидуальным проектам, разработку которых наши специалисты также предоставляют.
+                    </p>
+                    <p>
+                        работает в сфере строительства уже более 13 лет. На данный момент более 500 семей стали
+                        обладателями
+                        собственных домов благодаря нашей компании. За это время у нас накопился значительный опыт в
+                        работе
+                        эффективного и надежного строительства домов, что вызывает доверие у наших текущих и будущих
+                        клиентов.
+                    </p>
+                </div>
+            </div>
+            <div class="about-content">
+                <img class="about-content__author-photo" src="src/image/author/Evgeny.png" alt="author">
+                <div class="about-content__author-description">
+                    <div class="about-content__author-title">Здравствуйте, меня зовут Евгений Халипа</div>
+                    <p>Я, как руководитель отдела, гарантирую вам, что ваш дом будет построен качественно, в срок.
+                    </p>
+                </div>
+            </div>
+            <div class="about-content">
+                <div class="about-content__why-description">
+                    <img class="about-content__why-photo" src="src/image/author/why.png" alt="why us?">
+                    <ul>
+                        <li>Отработаны процессы и накоплен огромный опыт.</li>
+                        <li>Строим под ключ: от гео-изысканий участка до ландшафтных работ.</li>
+                        <li>Благодаря комплексному подходу с нами спокойно.</li>
+                        <li>Мы всегда дорабатываем проект дома под выбранный участок и потребности каждого из будущих
+                            жильцов.
+                        </li>
+                        <li>Строгое соблюдение ГОСТ, СНиП.</li>
+                        <li>Полный цикл — от лесозаготовки до готового дома под ключ.</li>
+                    </ul>
+                </div>
+            </div>
+<!--        </div>-->
     </section>
     <!--    ADVANTAGES SECTION    -->
     <section class="advantages">
@@ -390,19 +392,19 @@
     </section>
     <section class="building">
         <div class="building-buttons">
-            <div class="building-buttons__button active">
+            <div class="building-buttons__button active" data-id="4">
                 <div class="building-buttons__button-image">
                     <img src="./src/image/building/house.svg" alt="Дома">
                 </div>
                 <p class="building-buttons__button-subtitle">Дома</p>
             </div>
-            <div class="building-buttons__button">
+            <div class="building-buttons__button" data-id="5">
             <div class="building-buttons__button-image">
                 <img src="./src/image/building/garage.svg" alt="Гараж">
             </div>
                 <p class="building-buttons__button-subtitle">Гаражи</p>
             </div>
-            <div class="building-buttons__button">
+            <div class="building-buttons__button" data-id="6">
             <div class="building-buttons__button-image">
                 <img src="./src/image/building/bath.svg" alt="Баня">
             </div>
@@ -424,11 +426,11 @@
     <section class="progress">
         <h2 class="progress__title">Ход строительства</h2>
             <ul class="progress-tabs">
-                <li class="progress-tabs__tab" data-id="4">Фундамент</li>
-                <li class="progress-tabs__tab active" data-id="5">Сборка и Монтаж дома</li>
-                <li class="progress-tabs__tab" data-id="6">Инженерные системы</li>
-                <li class="progress-tabs__tab" data-id="7">Отделка</li>
-                <li class="progress-tabs__tab" data-id="8">Отзыв клиента</li>
+                <li class="progress-tabs__tab" data-id="7">Фундамент</li>
+                <li class="progress-tabs__tab active" data-id="8">Сборка и Монтаж дома</li>
+                <li class="progress-tabs__tab" data-id="9">Инженерные системы</li>
+                <li class="progress-tabs__tab" data-id="10">Отделка</li>
+                <li class="progress-tabs__tab" data-id="11">Отзыв клиента</li>
             </ul>
         <div class="progress-content">
             <img src="./src/image/progress/foundation.png" alt="Фундамент" class="progress-content__image">
