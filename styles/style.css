@@ -488,7 +488,7 @@ li {
   background-color: #25252C;
 }
 .building-buttons p {
-  color: #25252C;
+  color: rgba(2, 2, 2, 0.25);
   text-align: center;
   margin-top: 8px;
 }
