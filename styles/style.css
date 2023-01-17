@@ -275,7 +275,7 @@ li {
   height: 566px;
   padding-left: 98px;
   padding-right: 98px;
-  background: white url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
+  background: #FAFAFA url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
 }
 .advantages__title {
   text-align: center;
