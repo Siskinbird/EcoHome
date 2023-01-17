@@ -114,6 +114,7 @@ li {
   border: 0;
   font-size: 14px;
   transition: 0.3s ease-in-out all;
+  cursor: pointer;
 }
 .header-content__text-button:hover {
   background-color: #38384e;
@@ -335,7 +336,11 @@ li {
   border-radius: 55px;
   border: 0;
   font-size: 14px;
+  cursor: pointer;
   transition: 0.3s ease-in-out all;
+}
+.projects-button:hover {
+  background-color: #38384e;
 }
 
 .swiper-wrapper {
@@ -351,6 +356,10 @@ li {
   border-radius: 50%;
   background-color: #25252C;
   margin-left: 52px;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-prev:hover {
+  background-color: #38384e;
 }
 .swiper-button-prev:after {
   content: "";
@@ -371,6 +380,10 @@ li {
   border-radius: 50%;
   background-color: #25252C;
   margin-right: 52px;
+  transition: all 0.3s ease-in-out;
+}
+.swiper-button-next:hover {
+  background-color: #38384e;
 }
 .swiper-button-next:after {
   content: "";

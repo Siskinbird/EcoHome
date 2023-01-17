@@ -129,6 +129,7 @@ li {
         border: 0;
         font-size: 14px;
         transition: .3s ease-in-out all;
+        cursor: pointer;
 
         &:hover {
           background-color: #38384e;
@@ -363,7 +364,7 @@ li {
 
 //PROJECTS
 //TODO Добавить два блока по бокам с прозрачным градиентом
-//TODO накинуть ховер на кнопку
+
 .projects {
   height: 800px;
   background: #FAFAFA;
@@ -386,13 +387,16 @@ li {
       border-radius: 55px;
       border: 0;
       font-size: 14px;
+      cursor: pointer;
       transition: .3s ease-in-out all;
+      &:hover {
+        background-color: #38384e;
+      }
     }
 }
 .swiper-wrapper {
   width: 1400px;
 }
-//TODO накинуть ховеры на кнопки
 
 .swiper-button-prev {
   display: flex;
@@ -403,6 +407,10 @@ li {
   border-radius: 50%;
   background-color: #25252C;
   margin-left: 52px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: #38384e;
+  }
   &:after {
     content: '';
   }
@@ -422,6 +430,10 @@ li {
   border-radius: 50%;
   background-color: #25252C;
   margin-right: 52px;
+  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: #38384e;
+  }
   &:after {
     content: '';
   }
@@ -496,7 +508,7 @@ li {
 }
 //BUILDING
 //TODO Накинуть логики на кнопки
-//TODO настроить контейнер обрезан БГ
+
 //TODO кнопку плэй на видео
 .building {
   height: 600px;
