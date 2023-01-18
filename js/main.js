@@ -4,6 +4,7 @@ const aboutTabsWrapper = document.querySelector('.about-tabs');
 const aboutTabs = document.getElementsByClassName('about-tabs__tab');
 const aboutTabContent = document.getElementsByClassName('about-content');
 
+const test = document.getElementsByClassName('building-buttons')
 const buildingTabsWrapper = document.querySelector('.building-buttons');
 const buildingButtonsButton = document.getElementsByClassName('building-buttons__button');
 
@@ -12,6 +13,12 @@ const progressTabsWrapper = document.querySelector('.progress-tabs');
 aboutTabsWrapper.addEventListener('click', aboutTabClick);
 buildingTabsWrapper.addEventListener('click', buildingTabClick);
 progressTabsWrapper.addEventListener('click', progressTabClick);
+
+
+
+
+
+
 
 function aboutTabClick(event) {
     console.log(event.target);
