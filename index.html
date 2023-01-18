@@ -454,58 +454,58 @@
         <h2 class="quiz__title">Получите предварительный расчет стоимости дома за 1 минуту</h2>
         <!--        QUIZ       -->
         <div class="quiz-calculator" id="quiz">
-            <div class="quiz-questions">
-                <div class="quiz-questions-item">
-                    <h3 class="quiz-questions-item__question">Какой дом вы хотите построить?</h3>
-                    <div class="quiz-questions-item__answers">
-                        <label>
-                            <img src="./src/image/quiz/firstQ/block.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Дом из блоков</p>
-                        </label>
-                        <label>
-                            <img src="./src/image/quiz/firstQ/carcass.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Каркасный дом</p>
-                        </label>
-                        <label>
-                            <img src="./src/image/quiz/firstQ/brick.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Кирпичный дом</p>
-                        </label>
-                        <label>
-                            <img src="./src/image/quiz/firstQ/beam.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Дом из профилированного бруса</p>
-                        </label>
-                        <label>
-                            <img src="./src/image/quiz/firstQ/celinder.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Дом из цилиндрированного бруса</p>
-                        </label>
-                        <label>
-                            <img src="./src/image/quiz/firstQ/sip.png" alt="">
-                            <input type="radio" name="q1" class="radio">
-                            <div class="custom-radio__button"></div>
-                            <p>Дом из SIP-панелей</p>
-                        </label>
-                    </div>
-                </div>
+            <div class="quiz-questions" id="questions">
+<!--                <div class="quiz-questions-item">-->
+<!--                    <h3 class="quiz-questions-item__question">Какой дом вы хотите построить?</h3>-->
+<!--                    <div class="quiz-questions-item__answers">-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/block.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Дом из блоков</p>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/carcass.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Каркасный дом</p>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/brick.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Кирпичный дом</p>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/beam.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Дом из профилированного бруса</p>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/cylinder.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Дом из цилиндрированного бруса</p>-->
+<!--                        </label>-->
+<!--                        <label>-->
+<!--                            <img src="./src/image/quiz/firstQ/sip.png" alt="">-->
+<!--                            <input type="radio" name="q1" class="radio">-->
+<!--                            <div class="custom-radio__button"></div>-->
+<!--                            <p>Дом из SIP-панелей</p>-->
+<!--                        </label>-->
+<!--                    </div>-->
+<!--                </div>-->
             </div>
             <div class="quiz-calculator__progress">
                 <div class="quiz-calculator__progress-value"></div>
             </div>
             <div class="quiz-calculator__next">
-                <div class="quiz-calculator__next-count">01 / 07</div>
-                <div class="quiz-calculator__next-button">
-                    <span>Далее</span>
-                    <img src="./src/image/svg/arrow-right.svg">
-                </div>
+                <div class="quiz-calculator__next-count" id="count">01 / 07</div>
+                <button class="quiz-calculator__next-button" id="next-button" disabled>
+                    <span class="x">Далее</span>
+                    <img class="y" src="./src/image/svg/arrow-right.svg">
+                </button>
             </div>
         </div>
     </section>
@@ -530,7 +530,7 @@
         }
     });
 </script>
-
-<script src="js/main.js"></script>
+<script type="text/javascript" src="js/quiz.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -670,12 +670,24 @@ li {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  color: #FFFFFF;
   width: 170px;
   height: 52px;
   border-radius: 55px;
   border: 1px solid white;
+  background: inherit;
+  transition: all 0.3s ease-in-out;
+}
+.quiz-calculator__next-button:disabled {
+  color: #706e6e;
+  border: 1px solid #706e6e;
+}
+.quiz-calculator__next-button:disabled img {
+  opacity: 0.25;
 }
 .quiz-calculator__next-button img {
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
   padding-left: 10px;
   padding-top: 4px;
 }
