@@ -6,37 +6,31 @@ const DATA = [
                 id: '1',
                 image: './src/image/quiz/firstQ/block.png',
                 value: 'Дом из блоков',
-                className: ''
             },
             {
                 id: '2',
                 image: './src/image/quiz/firstQ/carcass.png',
                 value: 'Каркасный дом',
-                className: ''
             },
             {
                 id: '3',
                 image: './src/image/quiz/firstQ/brick.png',
                 value: 'Дом из блоков',
-                className: ''
             },
             {
                 id: '4',
                 image: './src/image/quiz/firstQ/beam.png',
                 value: 'Дом из профилированного бруса',
-                className: ''
             },
             {
                 id: '5',
                 image: './src/image/quiz/firstQ/cylinder.png',
                 value: 'Дом из цилиндрированного бруса',
-                className: ''
             },
             {
                 id: '6',
                 image: './src/image/quiz/firstQ/sip.png',
                 value: 'Дом из SIP-панелей',
-                className: ''
             },
         ]
     },
@@ -190,16 +184,36 @@ const DATA = [
             }
         ]
     },
+    {
+        question: 'Нужны ли дополнительные строения на участке?',
+        answers: [
+            {
+                id: '1',
+                image: './src/image/quiz/outbuilding/garage.png',
+                value: 'Гараж',
+            },
+            {
+                id: '2',
+                image: './src/image/quiz/outbuilding/sauna.png',
+                value: 'Сауна',
+            },
+            {
+                id: '3',
+                image: './src/image/quiz/outbuilding/bath.png',
+                value: 'Баня',
+            }
+        ]
+    },
 ]
 
 let results = {}
-
+const customRadioButton = document.getElementById('custom-radio');
 const quiz = document.getElementById('quiz');
 const questions = document.getElementById('questions');
 const count = document.getElementById('count');
 const nextButton =document.getElementById('next-button');
 
-const renderTestQuestions = (index) => {
+const mainSlideRender = index => {
     renderCount(index + 1)
 
     questions.dataset.currentStep = index;
@@ -222,7 +236,7 @@ const renderTestQuestions = (index) => {
     `
 }
 
-const renderTestTwoQuestions = (index) => {
+const sixthSlideRender = index => {
     renderCount(index + 1)
 
     questions.dataset.currentStep = index;
@@ -256,8 +270,8 @@ const renderQuestions = (index) => {
         .map((answer) => `
             <label>
                 <img src=${answer.image} alt="">
-                 <input type="radio" name=${index} value=${answer.id} class="radio">
-                 <div class="custom-radio__button"></div>
+                 <input type="radio" name=${index} value=${answer.id} class="radio" >
+                 <div class="custom-radio__button" id="custom-radio"></div>
                  <p>${answer.value}</p>
             </label>
             `
@@ -301,14 +315,23 @@ quiz.addEventListener('click', (event) => {
             || nextQuestionIndex === 2
             || nextQuestionIndex === 3
             || nextQuestionIndex === 4) {
-            //функция рендера отличающихся слайдов
-            //nextButton.disabled = true
-            renderTestQuestions(nextQuestionIndex)
+
+            //функция рендера слайдов с другими стилями
+
+            mainSlideRender(nextQuestionIndex)
 
         } else if(nextQuestionIndex === 5) {
-            renderTestTwoQuestions(nextQuestionIndex)
+            sixthSlideRender(nextQuestionIndex)
+        } else if (nextQuestionIndex === 6) {
+
+            renderQuestions(nextQuestionIndex)
+            document.getElementsByClassName('custom-radio__button')[0].style= "top:-20px";
+            document.getElementsByClassName('custom-radio__button')[1].style= "top:-20px";
+            document.getElementsByClassName('custom-radio__button')[2].style= "top:-20px";
+            //customRadioButton.style = 'top: -12px;'
         }
-        else if(nextQuestionIndex === 0 || nextQuestionIndex === 5) {
+
+        else if(nextQuestionIndex === 0) {
             renderQuestions(nextQuestionIndex)
         }
         console.log('yes');
