@@ -204,14 +204,69 @@ const DATA = [
             }
         ]
     },
+    {
+        title: 'Мы получили данные и приступаем к расчетам',
+        subtitle: 'Укажите куда выслать расчет стоимости?',
+        answers: [
+            {
+                id: '1',
+                value: 'Telegram',
+                image: './src/image/quiz/form/telegram.svg'
+            },
+            {
+                id: '2',
+                image: './src/image/quiz/form/viber.svg',
+                value: 'Viber',
+            },
+            {
+                id: '3',
+                image: './src/image/quiz/form/whatsApp.svg',
+                value: "What\'s App"
+            }
+        ]
+    }
+
 ]
 
 let results = {}
-const customRadioButton = document.getElementById('custom-radio');
+const customRadioButtons = document.getElementsByClassName('custom-radio__button');
 const quiz = document.getElementById('quiz');
 const questions = document.getElementById('questions');
 const count = document.getElementById('count');
-const nextButton =document.getElementById('next-button');
+const nextButton = document.getElementById('next-button');
+const nextBlock = document.getElementById('next-block')
+const feedbackForm = document.getElementById('feedback-form');
+const progressBar = document.getElementById('progress-bar');
+const pagination = document.getElementById('pagination');
+
+// const renderForm = (index) => {
+//     questions.dataset.currentStep = index;
+//
+//     const renderAnswers = () => DATA[index].answers
+//         .map((answer) => `
+//             <label>
+//                 <img src=${answer.image} alt="">
+//                  <input type="radio" name=${index} value=${answer.id} class="radio" >
+//                  <div class="custom-radio__form-button" id="custom-radio"></div>
+//                  <p>${answer.value}</p>
+//             </label>
+//             `
+//         ).join('');
+//
+//     questions.innerHTML = `
+//         <div class="quiz-questions">
+//
+//                 <h2 class= "quiz-feedback-form__title">${DATA[index].title}</h2>
+//                    <p class= "quiz-feedback-form__subtitle">${DATA[index].subtitle}</p>
+//                    <div class="quiz-questions-item__answers">${renderAnswers()}</div>
+//                    <div class= "quiz-feedback-form__buttons">
+//                    <div class= "quiz-feedback-form__buttons-button">
+//                    <div class= "quiz-feedback-form__buttons-button">
+//                    <div class= "quiz-feedback-form__buttons-button">
+//                 </div>
+//                 </div>
+//     `
+// }
 
 const mainSlideRender = index => {
     renderCount(index + 1)
@@ -236,7 +291,7 @@ const mainSlideRender = index => {
     `
 }
 
-const sixthSlideRender = index => {
+const sixthSlideRender = (index) => {
     renderCount(index + 1)
 
     questions.dataset.currentStep = index;
@@ -286,7 +341,7 @@ const renderQuestions = (index) => {
 }
 
 const renderCount = (currentStep) => {
-    count.innerHTML = '0' + `${currentStep}` + ' / 0' + `${DATA.length}`
+    count.innerHTML = '0' + `${currentStep}` + ' / 0' + `${DATA.length - 1}`
 }
 
 quiz.addEventListener('change', (event) => {
@@ -298,7 +353,6 @@ quiz.addEventListener('change', (event) => {
 })
 
 
-
 quiz.addEventListener('click', (event) => {
     //count logic
 
@@ -308,9 +362,24 @@ quiz.addEventListener('click', (event) => {
         event.target.classList.contains('y')) {
 
 
-        if(DATA.length === nextQuestionIndex) {
+        if (DATA.length === nextQuestionIndex + 1) {
             console.log('There will be a feedback form');
+            pagination.style.display = 'none';
+            questions.style.display = 'none';
+            feedbackForm.style.display = 'flex';
+            // renderForm(nextQuestionIndex)
+            // progressBar.style.display = 'none';
+            // count.style.display = 'none';
+            // nextBlock.style.display = 'none';
+            // questions.style.display = 'none';
+
             //рендер формы
+
+
+
+
+
+
         } else if (nextQuestionIndex === 1
             || nextQuestionIndex === 2
             || nextQuestionIndex === 3
@@ -320,21 +389,17 @@ quiz.addEventListener('click', (event) => {
 
             mainSlideRender(nextQuestionIndex)
 
-        } else if(nextQuestionIndex === 5) {
+        } else if (nextQuestionIndex === 5) {
             sixthSlideRender(nextQuestionIndex)
         } else if (nextQuestionIndex === 6) {
 
             renderQuestions(nextQuestionIndex)
-            document.getElementsByClassName('custom-radio__button')[0].style= "top:-20px";
-            document.getElementsByClassName('custom-radio__button')[1].style= "top:-20px";
-            document.getElementsByClassName('custom-radio__button')[2].style= "top:-20px";
-            //customRadioButton.style = 'top: -12px;'
-        }
-
-        else if(nextQuestionIndex === 0) {
+            for (let button in customRadioButtons) {
+                customRadioButtons[button].style = "top:-20px";
+            }
+        } else if (nextQuestionIndex === 0) {
             renderQuestions(nextQuestionIndex)
         }
-        console.log('yes');
     }
 })
 renderQuestions(0)

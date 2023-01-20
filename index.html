@@ -497,15 +497,45 @@
 <!--                    </div>-->
 <!--                </div>-->
             </div>
-            <div class="quiz-calculator__progress">
-                <div class="quiz-calculator__progress-value"></div>
+            <div class="quiz-questions__pagination" id="pagination">
+                <div class="quiz-calculator__progress" id="progress-bar">
+                    <div class="quiz-calculator__progress-value"></div>
+                </div>
+                <div class="quiz-calculator__next" id="next-block">
+                    <div class="quiz-calculator__next-count" id="count"></div>
+                    <button class="quiz-calculator__next-button" id="next-button" disabled>
+                        <span class="x">Далее</span>
+                        <img class="y" src="./src/image/svg/arrow-right.svg">
+                    </button>
+                </div>
             </div>
-            <div class="quiz-calculator__next">
-                <div class="quiz-calculator__next-count" id="count">01 / 07</div>
-                <button class="quiz-calculator__next-button" id="next-button" disabled>
-                    <span class="x">Далее</span>
-                    <img class="y" src="./src/image/svg/arrow-right.svg">
-                </button>
+
+
+            <div class="quiz-feedback-form" id="feedback-form">
+                <h2 class="quiz-feedback-form__title">Мы получили данные и приступаем к расчетам</h2>
+                <p class="quiz-feedback-form__subtitle">Укажите куда выслать расчет стоимости?</p>
+
+                <div class="quiz-feedback-form__buttons">
+                    <label>
+                        <input type="radio" name="q1" class="form-radio">
+                        <div class="custom-radio__form-button"></div>
+                        <img src="/src/image/quiz/form/telegram.svg" alt="">
+                        <p>Telegram</p>
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" class="form-radio">
+                        <div class="custom-radio__form-button"></div>
+                        <img src="/src/image/quiz/form/viber.svg" alt="">
+                        <p>Viber</p>
+                    </label>
+                    <label>
+                        <input type="radio" name="q1" class="form-radio">
+                        <div class="custom-radio__form-button"></div>
+                        <img src="/src/image/quiz/form/whatsApp.svg" alt="">
+                        <p>What's App</p>
+                    </label>
+
+                </div>
             </div>
         </div>
     </section>
