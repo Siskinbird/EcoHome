@@ -345,7 +345,7 @@ const renderCount = (currentStep) => {
 }
 
 quiz.addEventListener('change', (event) => {
-    if(event.target.classList.contains('radio')) {
+    if(event.target.classList.contains('radio') || event.target.classList.contains('form-radio')) {
         results[event.target.name] = event.target.value;
         console.log(results);
         nextButton.disabled = false
@@ -363,22 +363,11 @@ quiz.addEventListener('click', (event) => {
 
 
         if (DATA.length === nextQuestionIndex + 1) {
+            //рендер формы
             console.log('There will be a feedback form');
             pagination.style.display = 'none';
             questions.style.display = 'none';
             feedbackForm.style.display = 'flex';
-            // renderForm(nextQuestionIndex)
-            // progressBar.style.display = 'none';
-            // count.style.display = 'none';
-            // nextBlock.style.display = 'none';
-            // questions.style.display = 'none';
-
-            //рендер формы
-
-
-
-
-
 
         } else if (nextQuestionIndex === 1
             || nextQuestionIndex === 2
