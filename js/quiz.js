@@ -399,9 +399,11 @@ const phoneValidator = (phone) => {
     return regex.test(phone);
 }
 
-const tel = document.getElementById('telephone').value;
+
 
 const sub = () => {
+    const tel = document.getElementById('telephone').value;
+    console.log(tel);
     if (!phoneValidator(tel)) {
        alert('Не правильно набран номер')
     } else {
