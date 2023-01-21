@@ -392,3 +392,4 @@ quiz.addEventListener('click', (event) => {
     }
 })
 renderQuestions(0)
+

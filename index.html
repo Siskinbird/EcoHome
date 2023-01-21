@@ -511,7 +511,7 @@
             </div>
 
 
-            <div class="quiz-feedback-form" id="feedback-form">
+            <form class="quiz-feedback-form" id="feedback-form">
                 <h2 class="quiz-feedback-form__title">Мы получили данные и приступаем к расчетам</h2>
                 <p class="quiz-feedback-form__subtitle">Укажите куда выслать расчет стоимости?</p>
 
@@ -534,9 +534,24 @@
                         <img src="/src/image/quiz/form/whatsApp.svg" alt="">
                         <p>What's App</p>
                     </label>
-
                 </div>
-            </div>
+                <div class="quiz-feedback-form__data">
+                    <label>
+                        <input type="text" placeholder="Ваше имя" required>
+                    </label>
+                    <label>
+                        <input type="number" placeholder="Телефон" required>
+                    </label>
+                    <label>
+                        <input type="email" placeholder="Электронная почта (не обязательно)">
+                    </label>
+                </div>
+                <button type="submit" class="quiz-feedback-form__submit-button">
+                    <img src="./src/image/svg/arrow-right.svg" alt="arrow">
+                    <span>Оставить заявку</span>
+                </button>
+                <p>Нажимая на кнопку, вы соглашаетесь с условиями политики конфиденциальности и обработки персональных данных</p>
+            </form>
         </div>
     </section>
 </div>

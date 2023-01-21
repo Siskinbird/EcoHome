@@ -676,6 +676,7 @@ li {
   border-radius: 12px;
   padding-left: 20px;
   padding-right: 20px;
+  margin-bottom: 72px;
   ul {
     padding-inline-start: 0;
   }
@@ -907,9 +908,27 @@ li {
   display: none;
   flex-direction: column;
   color: #FFFFFF;
+  font-weight: 400;
   margin: 0 auto;
   width: 564px;
   padding-top: 84px;
+  &__submit-button {
+    width: 270px;
+    height: 64px;
+    border: 1px solid #FFFFFF;
+    background: inherit;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    margin-top: 48px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   label {
     margin-top: -30px;
   }
@@ -926,12 +945,46 @@ li {
       display: none;
     }
   }
+  &__data {
+    display: flex;
+    flex-direction: column;
+    margin-top: -74px;
+    input {
+      background-color: inherit;
+      border: none;
+      outline: none;
+      font-family: 'Golos_regular', sans-serif;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 18px;
+      height: 34px;
+      color: #FFFFFF;
+      &::placeholder {
+        color: white;
+        padding-bottom: 8px;
+        &:focus {
+          color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+    input[type="email"]::placeholder, input[type="email"] {
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    label {
+      margin-top: 60px;
+
+    }
+
+  }
 }
+
 .custom-radio__form-button {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
   bottom: -59px;
   left: 0;
   height: 66px;
