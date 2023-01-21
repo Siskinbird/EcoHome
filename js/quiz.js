@@ -239,6 +239,7 @@ const feedbackForm = document.getElementById('feedback-form');
 const progressBar = document.getElementById('progress-bar');
 const pagination = document.getElementById('pagination');
 
+
 // const renderForm = (index) => {
 //     questions.dataset.currentStep = index;
 //
@@ -393,3 +394,17 @@ quiz.addEventListener('click', (event) => {
 })
 renderQuestions(0)
 
+const phoneValidator = (phone) => {
+    let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+    return regex.test(phone);
+}
+
+const tel = document.getElementById('telephone').value;
+
+const sub = () => {
+    if (!phoneValidator(tel)) {
+       alert('Не правильно набран номер')
+    } else {
+        console.log('Valid')
+    }
+}
