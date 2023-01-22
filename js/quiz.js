@@ -5,31 +5,37 @@ const DATA = [
             {
                 id: '1',
                 image: './src/image/quiz/firstQ/block.png',
+                alt: 'Дом из блоков',
                 value: 'Дом из блоков',
             },
             {
                 id: '2',
                 image: './src/image/quiz/firstQ/carcass.png',
+                alt: 'Каркасный дом',
                 value: 'Каркасный дом',
             },
             {
                 id: '3',
                 image: './src/image/quiz/firstQ/brick.png',
+                alt: 'Дом из блоков',
                 value: 'Дом из блоков',
             },
             {
                 id: '4',
                 image: './src/image/quiz/firstQ/beam.png',
+                alt: 'Дом из профилированного бруса',
                 value: 'Дом из профилированного бруса',
             },
             {
                 id: '5',
                 image: './src/image/quiz/firstQ/cylinder.png',
+                alt: 'Дом из цилиндрированного бруса',
                 value: 'Дом из цилиндрированного бруса',
             },
             {
                 id: '6',
                 image: './src/image/quiz/firstQ/sip.png',
+                alt: 'Дом из SIP-панелей',
                 value: 'Дом из SIP-панелей',
             },
         ]
@@ -39,32 +45,27 @@ const DATA = [
         answers: [
             {
                 id: '1',
-                value: '1 этаж',
-                className: ''
+                value: '1 этаж'
             },
             {
                 id: '2',
-                value: '2 этажа',
-                className: 'quiz-questions-item__answers-second'
+                value: '2 этажа'
             },
             {
                 id: '3',
-                value: '3 этажа',
-                className: 'quiz-questions-item__answers-second'
+                value: '3 этажа'
             },
             {
                 id: '4',
-                value: '1 этаж + мансарда',
-                className: 'quiz-questions-item__answers-second'
+                value: '1 этаж + мансарда'
             },
             {
                 id: '5',
-                value: '2 этажа + мансарда',
-                className: 'quiz-questions-item__answers-second'
+                value: '2 этажа + мансарда'
             },
             {
                 id: '6',
-                value: 'Еще не определились',
+                value: 'Еще не определились'
             },
         ]
     },
@@ -137,50 +138,52 @@ const DATA = [
             {
                 id: '1',
                 image: './src/image/quiz/house_style/shale.png',
-                value: 'Шале',
-                className: '-styles'
+                alt: 'Шале',
+                value: 'Шале'
             },
             {
                 id: '2',
                 image: './src/image/quiz/house_style/fin.png',
+                alt: 'Финская классика',
                 value: 'Финская классика',
             },
             {
                 id: '3',
                 image: './src/image/quiz/house_style/rait.png',
+                alt: 'Райт',
                 value: 'Райт',
-                className: '-styles'
+
             },
             {
                 id: '4',
                 image: './src/image/quiz/house_style/modern.png',
-                value: 'Модерн',
-                className: '-styles'
+                alt: 'Модерн',
+                value: 'Модерн'
             },
             {
                 id: '5',
                 image: './src/image/quiz/house_style/barn.png',
-                value: 'Баухаус',
-                className: '-styles'
+                alt: 'Баухаус',
+                value: 'Баухаус'
             },
             {
                 id: '6',
                 image: './src/image/quiz/house_style/american.png',
-                value: 'Американский стиль',
-                className: '-styles'
+                alt: 'Американский стиль',
+                value: 'Американский стиль'
 
             },
             {
                 id: '7',
                 image: './src/image/quiz/house_style/fahverh.png',
-                value: 'Фахверк',
-                className: '-styles'
+                alt: 'Фахверк',
+                value: 'Фахверк'
             },
             {
                 id: '8',
                 image: './src/image/quiz/house_style/classic.png',
-                value: 'Классический стиль',
-                className: '-styles'
+                alt: 'Классический стиль',
+                value: 'Классический стиль'
             }
         ]
     },
@@ -190,17 +193,20 @@ const DATA = [
             {
                 id: '1',
                 image: './src/image/quiz/outbuilding/garage.png',
-                value: 'Гараж',
+                alt: 'Гараж',
+                value: 'Гараж'
             },
             {
                 id: '2',
                 image: './src/image/quiz/outbuilding/sauna.png',
-                value: 'Сауна',
+                alt: 'Сауна',
+                value: 'Сауна'
             },
             {
                 id: '3',
                 image: './src/image/quiz/outbuilding/bath.png',
-                value: 'Баня',
+                alt: 'Баня',
+                value: 'Баня'
             }
         ]
     },
@@ -211,17 +217,20 @@ const DATA = [
             {
                 id: '1',
                 value: 'Telegram',
-                image: './src/image/quiz/form/telegram.svg'
+                image: './src/image/quiz/form/telegram.svg',
+                alt: 'Telegram',
             },
             {
                 id: '2',
                 image: './src/image/quiz/form/viber.svg',
                 value: 'Viber',
+                alt: 'Viber'
             },
             {
                 id: '3',
                 image: './src/image/quiz/form/whatsApp.svg',
-                value: "What\'s App"
+                value: "What\'s App",
+                alt: 'What\'s App'
             }
         ]
     }
@@ -300,7 +309,7 @@ const sixthSlideRender = (index) => {
     const renderAnswers = () => DATA[index].answers
         .map((answer) => `
             <label>
-                <img src=${answer.image} alt="">
+                <img src=${answer.image} alt=${answer.alt}>
                  <input type="radio" name=${index} value=${answer.id} class="radio">
                  <div class="custom-radio__button-styles"></div>
                  <p>${answer.value}</p>
@@ -325,7 +334,7 @@ const renderQuestions = (index) => {
     const renderAnswers = () => DATA[index].answers
         .map((answer) => `
             <label>
-                <img src=${answer.image} alt="">
+                <img src=${answer.image} alt=${answer.alt}>
                  <input type="radio" name=${index} value=${answer.id} class="radio" >
                  <div class="custom-radio__button" id="custom-radio"></div>
                  <p>${answer.value}</p>
