@@ -182,6 +182,7 @@ li {
 
 //ABOUT
 //TODO кнопку плэй на видео
+//TODO РАЗОБРАТЬСЯ С КОНТЕЙНЕРАМИ!!!!
 
 .about {
   display: flex;
@@ -322,6 +323,7 @@ li {
 //}
 
 //ADVANTAGES
+//TODO Добавить контейнер для background
 .advantages {
   height: 566px;
   padding-left: 98px;
@@ -512,7 +514,7 @@ li {
 }
 //BUILDING
 //TODO Не получается накинуть листенер на всю кнопку :(
-
+//TODO Запихнуть слайдер в контейнер
 //TODO кнопку плэй на видео
 .building {
   height: 600px;
@@ -653,6 +655,7 @@ li {
 }
 //QUIZ
 //TODO Поправить контейнер
+//TODO Вытащить все дивы из LABEL
 .quiz {
   background-color: #FAFAFA;
   color: #25252C;
@@ -1007,6 +1010,9 @@ li {
   opacity: 1;
 }
 
+//FOOTER
+
+
 .footer {
   margin-top: 72px;
 }
@@ -1032,7 +1038,7 @@ li {
 //FOOTER CONTACTS
 .footer-bottom__wrapper {
   padding-top: 118px;
-  background: url(/src/image/socials/ecoground.svg) no-repeat 100% 50%;
+  background: url(/src/image/socials/ecoground.svg) no-repeat 100% 80%;
 }
 
 .footer-contacts {
