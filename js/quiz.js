@@ -395,7 +395,7 @@ quiz.addEventListener('click', (event) => {
 renderQuestions(0)
 
 const phoneValidator = (phone) => {
-    let regex = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+    let regex = /^(\+7|7|8)?[\s\-]?\(?[489]\d{2}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/;
     return regex.test(phone);
 }
 

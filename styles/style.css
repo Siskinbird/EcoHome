@@ -581,6 +581,7 @@ li {
   color: #25252C;
   font-weight: 600;
   text-align: center;
+  padding-bottom: 72px;
 }
 .quiz__subtitle {
   font-size: 16px;
@@ -600,7 +601,6 @@ li {
   border-radius: 12px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 72px;
 }
 .quiz-calculator ul {
   padding-inline-start: 0;
@@ -927,6 +927,54 @@ li {
 
 .form-radio:checked + .custom-radio__form-button::before {
   opacity: 1;
+}
+
+.footer {
+  margin-top: 72px;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 70px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer-links-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+.footer-links-column__title {
+  font-size: 16px;
+  padding-bottom: 12px;
+}
+
+.footer-bottom__wrapper {
+  padding-top: 118px;
+  background: url(/src/image/socials/ecoground.svg) no-repeat 100% 50%;
+}
+
+.footer-contacts__title {
+  margin-bottom: 24px;
+}
+.footer-contacts__phone {
+  max-width: 132px;
+  display: flex;
+  margin-top: 12px;
+}
+.footer-contacts__socials {
+  max-width: 215px;
+  cursor: pointer;
+  margin-top: 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.footer-contacts__copyright {
+  color: rgba(255, 255, 255, 0.25);
+  padding-bottom: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */
