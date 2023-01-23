@@ -44,7 +44,7 @@ li {
 
 .wrapper {
   max-width: 100%;
-  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
+  background: #FAFAFA;
 }
 
 .container {
@@ -141,6 +141,15 @@ li {
   height: 227px;
 }
 
+text {
+  font-size: 12px;
+  font-family: Franklin Gothic, sans-serif;
+  font-weight: 200;
+  fill: white;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+}
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -157,13 +166,17 @@ li {
     opacity: 1;
   }
 }
-.about {
+.about-wrapper {
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
   height: 800px;
   padding-left: 60px;
   padding-right: 138px;
+}
+
+.about {
+  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
 }
 .about-label {
   text-align: center;
@@ -275,15 +288,15 @@ li {
   height: 566px;
   padding-left: 98px;
   padding-right: 98px;
-  background: #FAFAFA url("/src/image/advantages/houseBg.png") no-repeat 100% 100%;
+  background: #FAFAFA url("/src/image/advantages/houseBg.png") no-repeat 94% 100%;
 }
 .advantages__title {
   text-align: center;
   font-size: 32px;
   font-weight: 600;
   color: #1F252D;
-  padding-top: 50px;
-  padding-bottom: 55px;
+  padding-top: 56px;
+  padding-bottom: 48px;
 }
 .advantages__items {
   display: flex;
@@ -323,7 +336,7 @@ li {
   font-weight: 600;
   color: #1F252D;
   padding-top: 50px;
-  padding-bottom: 55px;
+  padding-bottom: 30px;
 }
 .projects-button {
   display: flex;
@@ -331,7 +344,7 @@ li {
   justify-content: center;
   width: 283px;
   height: 64px;
-  margin: 44px auto 60px;
+  margin: 34px auto 60px;
   background-color: #25252C;
   border-radius: 55px;
   border: 0;
@@ -343,10 +356,6 @@ li {
   background-color: #38384e;
 }
 
-.swiper-wrapper {
-  width: 1400px;
-}
-
 .swiper-button-prev {
   display: flex;
   align-items: center;
@@ -355,7 +364,6 @@ li {
   height: 42px;
   border-radius: 50%;
   background-color: #25252C;
-  margin-left: 52px;
   transition: all 0.3s ease-in-out;
 }
 .swiper-button-prev:hover {
@@ -379,7 +387,6 @@ li {
   height: 42px;
   border-radius: 50%;
   background-color: #25252C;
-  margin-right: 52px;
   transition: all 0.3s ease-in-out;
 }
 .swiper-button-next:hover {
@@ -396,7 +403,7 @@ li {
 
 .swiper-slide {
   max-width: 380px;
-  height: 481px;
+  height: auto;
   border-radius: 12px;
   background-color: white;
   transition: 0.3s all ease-in-out;
@@ -435,7 +442,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 20px;
+  padding-top: 25px;
 }
 .slide-inner__price p {
   margin: 0 0 8px;
@@ -454,13 +461,20 @@ li {
 .slide-inner__price-button:hover {
   background: #dcd9d9;
 }
+.slide-inner__price-border {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  border-color: rgba(235, 235, 236, 0.25);
+  margin-top: 10px;
+}
 
 .building {
   height: 600px;
   background: #FAFAFA;
 }
 .building-buttons {
-  padding-top: 45px;
+  padding-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -502,7 +516,7 @@ li {
   align-items: center;
   justify-content: center;
   gap: 40px;
-  margin-top: 54px;
+  margin-top: 35px;
 }
 .building-content__description {
   color: #020202;
@@ -530,7 +544,7 @@ li {
   font-size: 32px;
   font-weight: 600;
   text-align: center;
-  padding-top: 54px;
+  padding-top: 30px;
   padding-bottom: 44px;
 }
 .progress-tabs {
@@ -930,7 +944,14 @@ li {
 }
 
 .footer {
-  margin-top: 72px;
+  padding-top: 72px;
+  background: linear-gradient(0deg, #1E262F, #1E262F), #181C1D;
+}
+.footer-border {
+  width: 100%;
+  border-color: rgba(255, 255, 255, 0.05);
+  margin-top: 84px;
+  margin-bottom: 32px;
 }
 
 .footer-links {
@@ -952,7 +973,6 @@ li {
 }
 
 .footer-bottom__wrapper {
-  padding-top: 118px;
   background: url(/src/image/socials/ecoground.svg) no-repeat 100% 80%;
 }
 
