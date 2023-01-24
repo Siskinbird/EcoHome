@@ -382,7 +382,6 @@ text {
 }
 
 //PROJECTS
-//TODO Добавить два блока по бокам с прозрачным градиентом
 
 .projects {
   height: 800px;
@@ -413,9 +412,27 @@ text {
       }
     }
 }
-//.swiper-wrapper {
-//  width: 1400px;
-//}
+
+//Блюр по бокам от слайдера
+
+.swiper::before, .swiper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 154px;
+  background: #FAFAFA;
+  filter: blur(100px);
+  z-index: 2;
+}
+.swiper::before {
+  left: -50px;
+}
+.swiper::after {
+  right: -50px;
+}
+
+
 
 .swiper-button-prev {
   display: flex;
@@ -425,7 +442,6 @@ text {
   height: 42px;
   border-radius: 50%;
   background-color: #25252C;
-  //margin-left: 2px;
   transition: all .3s ease-in-out;
   &:hover {
     background-color: #38384e;
@@ -448,7 +464,6 @@ text {
   height: 42px;
   border-radius: 50%;
   background-color: #25252C;
-  //margin-right: 2px;
   transition: all .3s ease-in-out;
   &:hover {
     background-color: #38384e;
@@ -695,7 +710,7 @@ text {
   }
 }
 .quiz-calculator {
-  height: 777px;
+  height: auto;
   background-color: #1F252D;
   border-radius: 12px;
   padding-left: 20px;
@@ -905,6 +920,7 @@ text {
 }
 
 .quiz-calculator__progress {
+  margin-top: 40px;
   background: rgba(255,255,255,0.1);
   border-radius: 100px;
   align-items: center;
@@ -913,19 +929,14 @@ text {
   height: 2px;
   width: 100%;
   &-value {
-    animation: load 3s normal forwards;
     box-shadow: 0 10px 40px -10px #fff;
     border-radius: 100px;
     background: #fff;
-    height: 1px;
-    width: 0;
+    height: .3px;
+    transition: 1s all ease-in;
   }
 }
 
-@keyframes load {
-  0% { width: 0; }
-  100% { width: 14%; }
-}
 
 .quiz-feedback-form {
   display: none;

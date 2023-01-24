@@ -496,12 +496,12 @@
 <!--                </div>-->
             </div>
             <div class="quiz-questions__pagination" id="pagination">
-                <div class="quiz-calculator__progress" id="progress-bar">
-                    <div class="quiz-calculator__progress-value"></div>
-                </div>
+                <div class="quiz-calculator__progress">
+                <div class="quiz-calculator__progress-value" id="progress-bar" style="width:15%;"></div>
+                    </div>
                 <div class="quiz-calculator__next" id="next-block">
                     <div class="quiz-calculator__next-count" id="count"></div>
-                    <button class="quiz-calculator__next-button" id="next-button" disabled>
+                    <button onclick="updateProgressBar()" class="quiz-calculator__next-button" id="next-button" >
                         <span class="x">Далее</span>
                         <img class="y" src="./src/image/svg/arrow-right.svg" alt="Далее">
                     </button>

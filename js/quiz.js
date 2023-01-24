@@ -245,41 +245,20 @@ const count = document.getElementById('count');
 const nextButton = document.getElementById('next-button');
 const nextBlock = document.getElementById('next-block')
 const feedbackForm = document.getElementById('feedback-form');
-const progressBar = document.getElementById('progress-bar');
+
 const pagination = document.getElementById('pagination');
 
 
-// const renderForm = (index) => {
-//     questions.dataset.currentStep = index;
-//
-//     const renderAnswers = () => DATA[index].answers
-//         .map((answer) => `
-//             <label>
-//                 <img src=${answer.image} alt="">
-//                  <input type="radio" name=${index} value=${answer.id} class="radio" >
-//                  <div class="custom-radio__form-button" id="custom-radio"></div>
-//                  <p>${answer.value}</p>
-//             </label>
-//             `
-//         ).join('');
-//
-//     questions.innerHTML = `
-//         <div class="quiz-questions">
-//
-//                 <h2 class= "quiz-feedback-form__title">${DATA[index].title}</h2>
-//                    <p class= "quiz-feedback-form__subtitle">${DATA[index].subtitle}</p>
-//                    <div class="quiz-questions-item__answers">${renderAnswers()}</div>
-//                    <div class= "quiz-feedback-form__buttons">
-//                    <div class= "quiz-feedback-form__buttons-button">
-//                    <div class= "quiz-feedback-form__buttons-button">
-//                    <div class= "quiz-feedback-form__buttons-button">
-//                 </div>
-//                 </div>
-//     `
-// }
+function updateProgressBar() {
+    const progressBar = document.getElementById("progress-bar");
+    let currentProgress = parseInt(progressBar.style.width);
+    let newProgress = currentProgress + 15;
+    progressBar.style.width = newProgress + "%";
+}
 
 const mainSlideRender = index => {
     renderCount(index + 1)
+
 
     questions.dataset.currentStep = index;
 
@@ -351,10 +330,12 @@ const renderQuestions = (index) => {
 }
 
 const renderCount = (currentStep) => {
+
     count.innerHTML = '0' + `${currentStep}` + ' / 0' + `${DATA.length - 1}`
 }
 
 quiz.addEventListener('change', (event) => {
+
     if(event.target.classList.contains('radio') || event.target.classList.contains('form-radio')) {
         results[event.target.name] = event.target.value;
         console.log(results);
@@ -366,6 +347,7 @@ quiz.addEventListener('change', (event) => {
 quiz.addEventListener('click', (event) => {
     //count logic
 
+
     let nextQuestionIndex = Number(questions.dataset.currentStep) + 1
     if (event.target.classList.contains('quiz-calculator__next-button') ||
         event.target.classList.contains('x') ||
@@ -373,23 +355,29 @@ quiz.addEventListener('click', (event) => {
 
 
         if (DATA.length === nextQuestionIndex + 1) {
+
             //рендер формы
             console.log('There will be a feedback form');
             pagination.style.display = 'none';
             questions.style.display = 'none';
             feedbackForm.style.display = 'flex';
 
+
         } else if (nextQuestionIndex === 1
             || nextQuestionIndex === 2
             || nextQuestionIndex === 3
             || nextQuestionIndex === 4) {
 
+
             //функция рендера слайдов с другими стилями
 
             mainSlideRender(nextQuestionIndex)
 
+
         } else if (nextQuestionIndex === 5) {
+
             sixthSlideRender(nextQuestionIndex)
+
         } else if (nextQuestionIndex === 6) {
 
             renderQuestions(nextQuestionIndex)
@@ -400,6 +388,7 @@ quiz.addEventListener('click', (event) => {
             renderQuestions(nextQuestionIndex)
         }
     }
+
 })
 renderQuestions(0)
 
