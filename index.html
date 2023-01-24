@@ -391,22 +391,22 @@
         </div>
     </section>
     <section class="building">
-        <div class="building-buttons">
+        <div class="building-buttons" id="buttons-container">
             <div class="building-buttons__button active" data-id="4">
                 <div class="building-buttons__button-image">
-                    <img src="./src/image/building/house.svg" alt="Дома">
+                    <img class="test" src="./src/image/building/house.svg" alt="Дома">
                 </div>
                 <p class="building-buttons__button-subtitle">Дома</p>
             </div>
             <div class="building-buttons__button" data-id="5">
                 <div class="building-buttons__button-image">
-                    <img src="./src/image/building/garage.svg" alt="Гараж">
+                    <img class="test" src="./src/image/building/garage.svg" alt="Гараж">
                 </div>
                 <p class="building-buttons__button-subtitle">Гаражи</p>
             </div>
             <div class="building-buttons__button" data-id="6">
                 <div class="building-buttons__button-image">
-                    <img src="./src/image/building/bath.svg" alt="Баня">
+                    <img class="test" src="./src/image/building/bath.svg" alt="Баня">
                 </div>
                 <p class="building-buttons__button-subtitle">Бани</p>
             </div>
@@ -455,47 +455,6 @@
         <!--        QUIZ       -->
         <div class="quiz-calculator" id="quiz">
             <div class="quiz-questions" id="questions">
-<!--                <div class="quiz-questions-item">-->
-<!--                    <h3 class="quiz-questions-item__question">Какой дом вы хотите построить?</h3>-->
-<!--                    <div class="quiz-questions-item__answers">-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/block.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Дом из блоков</p>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/carcass.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Каркасный дом</p>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/brick.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Кирпичный дом</p>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/beam.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Дом из профилированного бруса</p>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/cylinder.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Дом из цилиндрированного бруса</p>-->
-<!--                        </label>-->
-<!--                        <label>-->
-<!--                            <img src="./src/image/quiz/firstQ/sip.png" alt="">-->
-<!--                            <input type="radio" name="q1" class="radio">-->
-<!--                            <div class="custom-radio__button"></div>-->
-<!--                            <p>Дом из SIP-панелей</p>-->
-<!--                        </label>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
             <div class="quiz-questions__pagination" id="pagination">
                 <div class="quiz-calculator__progress">
@@ -504,13 +463,11 @@
                 <div class="quiz-calculator__next" id="next-block">
                     <div class="quiz-calculator__next-count" id="count"></div>
                     <button onclick="updateProgressBar()" class="quiz-calculator__next-button" id="next-button" >
-                        <span class="x">Далее</span>
-                        <img class="y" src="./src/image/svg/arrow-right.svg" alt="Далее">
+                        Далее
                     </button>
                 </div>
             </div>
-
-
+            
             <form class="quiz-feedback-form" id="feedback-form" onsubmit="return false;">
                 <h2 class="quiz-feedback-form__title">Мы получили данные и приступаем к расчетам</h2>
                 <p class="quiz-feedback-form__subtitle">Укажите куда выслать расчет стоимости?</p>

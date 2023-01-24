@@ -242,12 +242,11 @@ const customRadioButtons = document.getElementsByClassName('custom-radio__button
 const quiz = document.getElementById('quiz');
 const questions = document.getElementById('questions');
 const count = document.getElementById('count');
-const nextButton = document.getElementById('next-button');
-const nextBlock = document.getElementById('next-block')
 const feedbackForm = document.getElementById('feedback-form');
 
 const pagination = document.getElementById('pagination');
 
+/** ОБНОВЛЕНИЕ ПРОГРЕСС-БАРА */
 
 function updateProgressBar() {
     const progressBar = document.getElementById("progress-bar");
@@ -256,12 +255,13 @@ function updateProgressBar() {
     progressBar.style.width = newProgress + "%";
 }
 
+/** РЕНДЕР ГЛАВНОГО СЛАЙДА ОПРОСА */
+
 const mainSlideRender = index => {
     renderCount(index + 1)
-
-
     questions.dataset.currentStep = index;
 
+    /** РЕНДЕР ОТВЕТОВ */
     const renderAnswers = () => DATA[index].answers
         .map((answer) => `
             <label>
@@ -280,6 +280,7 @@ const mainSlideRender = index => {
     `
 }
 
+/** РЕНДЕР СЛАЙДОВ С ИНЫМИ СТИЛЯМИ И КЛАССАМИ */
 const sixthSlideRender = (index) => {
     renderCount(index + 1)
 
@@ -329,57 +330,45 @@ const renderQuestions = (index) => {
     `
 }
 
+/** РЕНДЕР БЛОКА С СЧЕТЧИКОМ ВОПРОСОВ */
 const renderCount = (currentStep) => {
-
     count.innerHTML = ` <span>${'0' + currentStep}</span>` + ' / 0' + `${DATA.length - 1}`
 }
 
+/** СЛУШАТЕЛЬ ИЗМЕНЕНИЯ В ОТВЕТАХ, ЗАПИСЬ ОТВЕТА В ОБЪЕКТ */
 quiz.addEventListener('change', (event) => {
-
-    if(event.target.classList.contains('radio') || event.target.classList.contains('form-radio')) {
+    if (event.target.classList.contains('radio') || event.target.classList.contains('form-radio')) {
         results[event.target.name] = event.target.value;
         console.log(results);
-        nextButton.disabled = false
     }
 })
 
+/** ПЕРЕХОД К СЛЕДУЮЩЕМУ ВОПРОСУ, ОТРИСОВКА СЛАЙДОВ В ЗАВИСИМОСТИ ОТ СЧЁТЧИКА */
 
 quiz.addEventListener('click', (event) => {
-    //count logic
-
 
     let nextQuestionIndex = Number(questions.dataset.currentStep) + 1
-    if (event.target.classList.contains('quiz-calculator__next-button') ||
-        event.target.classList.contains('x') ||
-        event.target.classList.contains('y')) {
 
+    if (event.target.classList.contains('quiz-calculator__next-button')) {
 
         if (DATA.length === nextQuestionIndex + 1) {
-
-            //рендер формы
-            console.log('There will be a feedback form');
+            /** РЕНДЕР ФОРМЫ ОБРАТНОЙ СВЯЗИ */
             pagination.style.display = 'none';
             questions.style.display = 'none';
             feedbackForm.style.display = 'flex';
 
-
+            /** РЕНДЕР ЧЕТЫРЁХ ОДИНАКОВЫХ СЛАЙДОВ */
         } else if (nextQuestionIndex === 1
             || nextQuestionIndex === 2
             || nextQuestionIndex === 3
             || nextQuestionIndex === 4) {
-
-
-            //функция рендера слайдов с другими стилями
-
             mainSlideRender(nextQuestionIndex)
-
-
         } else if (nextQuestionIndex === 5) {
 
+            /** РЕНДЕР ПЯТОГО СЛАЙДА */
             sixthSlideRender(nextQuestionIndex)
-
         } else if (nextQuestionIndex === 6) {
-
+            /** РЕНДЕР ШЕСТОГО СЛАЙДА */
             renderQuestions(nextQuestionIndex)
             for (let button in customRadioButtons) {
                 customRadioButtons[button].style = "top:-20px";
@@ -388,9 +377,10 @@ quiz.addEventListener('click', (event) => {
             renderQuestions(nextQuestionIndex)
         }
     }
-
 })
 renderQuestions(0)
+
+/** ФУНКЦИЯ ВАЛИДАЦИИ РОССИЙСКИХ НОМЕРОВ */
 
 const phoneValidator = (phone) => {
     let regex = /^(\+7|7|8)?[\s\-]?\(?[489]\d{2}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$/;
@@ -398,12 +388,11 @@ const phoneValidator = (phone) => {
 }
 
 
-
 const sub = () => {
     const tel = document.getElementById('telephone').value;
     console.log(tel);
     if (!phoneValidator(tel)) {
-       alert('Не правильно набран номер')
+        alert('Не правильно набран номер')
     } else {
         console.log('Valid')
     }

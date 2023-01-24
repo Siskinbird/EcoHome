@@ -1,27 +1,13 @@
+/** ТАБЫ ДЛЯ БЛОКА "О НАС" */
+
 const aboutTabsWrapper = document.querySelector('.about-tabs');
-
-
 const aboutTabs = document.getElementsByClassName('about-tabs__tab');
 const aboutTabContent = document.getElementsByClassName('about-content');
 
-const test = document.getElementsByClassName('building-buttons')
-const buildingTabsWrapper = document.querySelector('.building-buttons');
-const buildingButtonsButton = document.getElementsByClassName('building-buttons__button');
-
-const progressTabsWrapper = document.querySelector('.progress-tabs');
-
 aboutTabsWrapper.addEventListener('click', aboutTabClick);
-buildingTabsWrapper.addEventListener('click', buildingTabClick);
-progressTabsWrapper.addEventListener('click', progressTabClick);
-
-
-
-
-
 
 
 function aboutTabClick(event) {
-    console.log(event.target);
     const tabId = event.target.dataset.id;
     [...aboutTabs].forEach((tab, i) => {
         tab.classList.remove('active');
@@ -32,19 +18,31 @@ function aboutTabClick(event) {
     aboutTabContent[tabId - 1].classList.add('active');
 }
 
-function buildingTabClick(event) {
-    console.log(event.target);
-     const tabId = event.target.dataset.id;
-     [...buildingButtonsButton].forEach((tab, i) => {
-         tab.classList.remove('active');
-         buildingButtonsButton[i].classList.remove('active');
-     })
-     buildingButtonsButton[tabId - 4].classList.add('active');
+
+/** ТАБЫ ДЛЯ БЛОКА "МЫ СТРОИМ ДОМА" */
+
+const buildingButtonsButton = document.getElementsByClassName('building-buttons__button');
+
+const buttons = document.querySelectorAll('.building-buttons__button')
+
+for(let button of buttons) {
+    button.addEventListener('click', function() {
+        console.log(button);
+        [...buildingButtonsButton].forEach((tab, i) => {
+            tab.classList.remove('active');
+        })
+        button.classList.add('active')
+    })
 }
 
 
+/** ТАБЫ ДЛЯ БЛОКА "ХОД СТРОИТЕЛЬСТВА" */
+
+const progressTabsWrapper = document.querySelector('.progress-tabs');
 const progressTabs = document.getElementsByClassName('progress-tabs__tab');
 const progressTabContent = document.getElementsByClassName('progress-content');
+
+progressTabsWrapper.addEventListener('click', progressTabClick);
 
 
 function progressTabClick(event) {
