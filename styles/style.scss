@@ -190,7 +190,7 @@ text {
 
 
 //ABOUT
-//TODO кнопку плэй на видео
+
 
 
 .about-wrapper {
@@ -200,6 +200,24 @@ text {
   height: 800px;
   padding-left: 60px;
   padding-right: 138px;
+}
+.about-video__wrapper {
+  width: 376px;
+  height: 221px;
+  z-index: 2;
+  margin-left: auto;
+  background: url("/src/image/video/video.png") no-repeat 100% 100%;
+  img {
+    cursor: pointer;
+    position: relative;
+    top: 41%;
+    left: 34%;
+    transition: .3s ease-in-out all;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
 }
 
 .about {
@@ -550,7 +568,6 @@ text {
 //BUILDING
 //TODO Не получается накинуть листенер на всю кнопку :(
 
-//TODO кнопку плэй на видео
 .building {
   height: 600px;
   background: #FAFAFA;
@@ -627,6 +644,21 @@ text {
         -1px 16px 16px rgba(0, 0, 0, 0.09),
         0px 4px 9px rgba(0, 0, 0, 0.1),
         0px 0px 0px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &__video {
+      width: 594px;
+      height: 410px;
+      background: url(/src/image/building/video.png) no-repeat 100% 100%;
+      img {
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transition: 0.3s ease-in-out all;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
 
@@ -715,8 +747,15 @@ text {
   border-radius: 12px;
   padding-left: 20px;
   padding-right: 20px;
+
   ul {
     padding-inline-start: 0;
+  }
+
+  &__next-count {
+    span {
+      font-size: 20px;
+    }
   }
 }
 .quiz-questions {
@@ -1068,6 +1107,9 @@ text {
     &__title {
       font-size: 16px;
       padding-bottom: 12px;
+    }
+    &__link {
+      font-size: 16px;
     }
   }
 }

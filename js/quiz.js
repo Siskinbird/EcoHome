@@ -331,7 +331,7 @@ const renderQuestions = (index) => {
 
 const renderCount = (currentStep) => {
 
-    count.innerHTML = '0' + `${currentStep}` + ' / 0' + `${DATA.length - 1}`
+    count.innerHTML = ` <span>${'0' + currentStep}</span>` + ' / 0' + `${DATA.length - 1}`
 }
 
 quiz.addEventListener('change', (event) => {
