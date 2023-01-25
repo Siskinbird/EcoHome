@@ -180,7 +180,7 @@ text {
   height: 221px;
   z-index: 2;
   margin-left: auto;
-  background: url("/src/image/video/video.png") no-repeat 100% 100%;
+  background: url("../src/image/video/video.png") no-repeat 100% 100%;
 }
 .about-video__wrapper img {
   cursor: pointer;
@@ -306,7 +306,7 @@ text {
   height: 566px;
   padding-left: 98px;
   padding-right: 98px;
-  background: #FAFAFA url("/src/image/advantages/houseBg.png") no-repeat 94% 100%;
+  background: #FAFAFA url("../src/image/advantages/houseBg.png") no-repeat 94% 100%;
 }
 .advantages__title {
   text-align: center;
@@ -575,7 +575,7 @@ text {
 .building-content__video {
   width: 594px;
   height: 410px;
-  background: url(/src/image/building/video.png) no-repeat 100% 100%;
+  background: url("../src/image/building/video.png") no-repeat 100% 100%;
 }
 .building-content__video img {
   cursor: pointer;
@@ -690,7 +690,7 @@ text {
   height: 52px;
   border-radius: 55px;
   border: 1px solid white;
-  background: url("/src/image/svg/arrow-right.svg") 69% 55% no-repeat;
+  background: url("../src/image/svg/arrow-right.svg") 69% 55% no-repeat;
   transition: all 0.3s ease-in-out;
 }
 .quiz-calculator__progress {
@@ -796,7 +796,7 @@ text {
   height: 24px;
   border: 6px solid #1E262F;
   border-radius: 50%;
-  background: #1E262F url(/src/image/quiz/check.svg) 0 0 no-repeat;
+  background: #1E262F url("../src/image/quiz/check.svg") 0 0 no-repeat;
 }
 
 .custom-radio__button-styles::before {
@@ -806,7 +806,7 @@ text {
   height: 24px;
   border-radius: 50%;
   border: 6px solid #FFFFFF;
-  background: white url(/src/image/quiz/checked.svg) 0 0 no-repeat;
+  background: white url("../src/image/quiz/checked.svg") 0 0 no-repeat;
   opacity: 0;
   transition: 0.3s;
 }
@@ -825,7 +825,7 @@ text {
   height: 24px;
   border: 6px solid #1E262F;
   border-radius: 50%;
-  background: #1E262F url(/src/image/quiz/check.svg) 0 0 no-repeat;
+  background: #1E262F url("../src/image/quiz/check.svg") 0 0 no-repeat;
 }
 
 .custom-radio__button-additional::before {
@@ -835,7 +835,7 @@ text {
   height: 24px;
   border-radius: 50%;
   border: 6px solid #FFFFFF;
-  background: white url(/src/image/quiz/checked.svg) 0 0 no-repeat;
+  background: white url("../src/image/quiz/checked.svg") 0 0 no-repeat;
   opacity: 0;
   transition: 0.3s;
 }
@@ -856,7 +856,7 @@ text {
   height: 24px;
   border: 6px solid #1E262F;
   border-radius: 50%;
-  background: #1E262F url(/src/image/quiz/check.svg) 0 0 no-repeat;
+  background: #1E262F url("../src/image/quiz/check.svg") 0 0 no-repeat;
 }
 
 .custom-radio__button::before {
@@ -866,7 +866,7 @@ text {
   height: 24px;
   border-radius: 50%;
   border: 6px solid #FFFFFF;
-  background: white url(/src/image/quiz/checked.svg) 0 0 no-repeat;
+  background: white url("../src/image/quiz/checked.svg") 0 0 no-repeat;
   opacity: 0;
   transition: 0.3s;
 }
@@ -1007,7 +1007,7 @@ text {
 }
 
 .footer-bottom__wrapper {
-  background: url(/src/image/socials/ecoground.svg) no-repeat 100% 80%;
+  background: url("../src/image/socials/ecoground.svg") no-repeat 100% 80%;
 }
 
 .footer-contacts__title {
