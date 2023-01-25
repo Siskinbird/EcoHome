@@ -700,7 +700,7 @@ text {
   align-items: center;
   position: relative;
   display: flex;
-  height: 2px;
+  height: 3px;
   width: 100%;
 }
 .quiz-calculator__progress-value {

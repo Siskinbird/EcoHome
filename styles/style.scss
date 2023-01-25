@@ -770,7 +770,7 @@ text {
     align-items: center;
     position: relative;
     display: flex;
-    height: 2px;
+    height: 3px;
     width: 100%;
     &-value {
       box-shadow: 0 10px 40px -10px #fff;
@@ -1086,7 +1086,6 @@ text {
 //FOOTER CONTACTS
 
 .footer-bottom__wrapper {
-  //padding-top: 32px;
   background: url("../src/image/socials/ecoground.svg") no-repeat 100% 80%;
 }
 
